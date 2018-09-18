@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="SuisseIntl-Bold.otf">
+            <string>SuisseIntl-Bold</string>
+        </array>
+        <array key="SuisseIntl-Regular.otf">
+            <string>SuisseIntl-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="159" id="UbI-AD-C0v" customClass="FreezerListItemCell" customModule="Doublefreeze" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="385" height="159"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="UbI-AD-C0v" id="hiu-EN-KES">
+                <rect key="frame" x="0.0" y="0.0" width="385" height="158.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="paT-Ls-0AS">
+                        <rect key="frame" x="52" y="29.5" width="16" height="16"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="16" id="7mL-Y3-K5E"/>
+                            <constraint firstAttribute="height" constant="16" id="kRQ-nf-A73"/>
+                        </constraints>
+                    </view>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="iOS" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cjo-tr-e6w">
+                        <rect key="frame" x="84" y="10" width="249" height="47"/>
+                        <fontDescription key="fontDescription" name="SuisseIntl-Bold" family="Suisse Int'l" pointSize="36"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Мария" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FLn-XQ-hP2">
+                        <rect key="frame" x="84" y="57" width="249" height="26"/>
+                        <fontDescription key="fontDescription" name="SuisseIntl-Regular" family="Suisse Int'l" pointSize="20"/>
+                        <color key="textColor" name="PinkishGreyDark"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                <constraints>
+                    <constraint firstItem="FLn-XQ-hP2" firstAttribute="leading" secondItem="paT-Ls-0AS" secondAttribute="trailing" constant="16" id="71d-eT-jqT"/>
+                    <constraint firstItem="FLn-XQ-hP2" firstAttribute="top" secondItem="cjo-tr-e6w" secondAttribute="bottom" id="Smu-GH-Bbt"/>
+                    <constraint firstItem="paT-Ls-0AS" firstAttribute="centerY" secondItem="cjo-tr-e6w" secondAttribute="centerY" constant="4" id="cn9-fS-BWI"/>
+                    <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="FLn-XQ-hP2" secondAttribute="bottom" constant="10" id="e7G-mm-8Qb"/>
+                    <constraint firstItem="cjo-tr-e6w" firstAttribute="top" secondItem="hiu-EN-KES" secondAttribute="top" constant="10" id="g43-Nf-wPY"/>
+                    <constraint firstItem="cjo-tr-e6w" firstAttribute="leading" secondItem="paT-Ls-0AS" secondAttribute="trailing" constant="16" id="hB7-99-B9J"/>
+                </constraints>
+            </tableViewCellContentView>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="paT-Ls-0AS" firstAttribute="leading" secondItem="CXM-hv-Flc" secondAttribute="leading" constant="52" id="64k-U3-a7e"/>
+                <constraint firstItem="CXM-hv-Flc" firstAttribute="trailing" secondItem="cjo-tr-e6w" secondAttribute="trailing" constant="52" id="C3Q-6I-p6e"/>
+                <constraint firstItem="CXM-hv-Flc" firstAttribute="trailing" secondItem="FLn-XQ-hP2" secondAttribute="trailing" constant="52" id="a4t-zK-aEI"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="CXM-hv-Flc"/>
+            <connections>
+                <outlet property="circleView" destination="paT-Ls-0AS" id="1Ik-U9-v6t"/>
+                <outlet property="freezerNameLabel" destination="FLn-XQ-hP2" id="tnZ-Io-r4V"/>
+                <outlet property="roomNameLabel" destination="cjo-tr-e6w" id="SaR-XJ-CLh"/>
+            </connections>
+            <point key="canvasLocation" x="607.97101449275362" y="162.38839285714286"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <namedColor name="PinkishGreyDark">
+            <color red="0.72941176470588232" green="0.72941176470588232" blue="0.72941176470588232" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

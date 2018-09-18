@@ -1,0 +1,811 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0F139EFD2278A86900B763F7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F139EFC2278A86900B763F7 /* AppDelegate.swift */; };
+		0F139F042278A86A00B763F7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0F139F032278A86A00B763F7 /* Assets.xcassets */; };
+		0F139F072278A86A00B763F7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0F139F052278A86A00B763F7 /* LaunchScreen.storyboard */; };
+		0F139F102278A8E700B763F7 /* ToggleControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F139F0F2278A8E700B763F7 /* ToggleControl.swift */; };
+		0F139F172278A8F300B763F7 /* FreezerCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0F139F122278A8F300B763F7 /* FreezerCell.xib */; };
+		0F139F182278A8F300B763F7 /* FreezerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F139F132278A8F300B763F7 /* FreezerCell.swift */; };
+		0F139F192278A8F300B763F7 /* FreezerCarouselVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F139F142278A8F300B763F7 /* FreezerCarouselVM.swift */; };
+		0F139F1A2278A8F300B763F7 /* FreezerCarouselVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F139F152278A8F300B763F7 /* FreezerCarouselVC.swift */; };
+		0F139F1B2278A8F300B763F7 /* FreezerCellVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F139F162278A8F300B763F7 /* FreezerCellVM.swift */; };
+		0F139F1F2278A8F900B763F7 /* FreezersListVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F139F1D2278A8F900B763F7 /* FreezersListVM.swift */; };
+		0F139F202278A8F900B763F7 /* FreezersListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F139F1E2278A8F900B763F7 /* FreezersListVC.swift */; };
+		0F139F242278A90000B763F7 /* HomeVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F139F222278A90000B763F7 /* HomeVM.swift */; };
+		0F139F252278A90000B763F7 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F139F232278A90000B763F7 /* HomeVC.swift */; };
+		0F139F942278AB0600B763F7 /* SlowControls.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F139F882278AAE900B763F7 /* SlowControls.framework */; };
+		0F139F952278AB0600B763F7 /* SlowControls.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0F139F882278AAE900B763F7 /* SlowControls.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		0F13A4622278AD7C00B763F7 /* UIColor.Palette.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F13A4612278AD7C00B763F7 /* UIColor.Palette.swift */; };
+		0F55B163227951570057319E /* UIFont.Palette.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F55B162227951570057319E /* UIFont.Palette.swift */; };
+		0F55BAE8227957190057319E /* SuisseIntl-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 0F55B161227950690057319E /* SuisseIntl-Bold.otf */; };
+		0F55BAEA227958450057319E /* SuisseIntl-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 0F55BAE9227958450057319E /* SuisseIntl-Regular.otf */; };
+		0F55BAEC2279C4C60057319E /* TogleIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F55BAEB2279C4C60057319E /* TogleIcon.swift */; };
+		0F68216C2283D4BC008097F2 /* SnowFlakeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F68216B2283D4BC008097F2 /* SnowFlakeView.swift */; };
+		0F68263822844099008097F2 /* FloorChangedNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F68263722844099008097F2 /* FloorChangedNotification.swift */; };
+		0F682B0722886872008097F2 /* IFreezersHttpClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F682B0422886872008097F2 /* IFreezersHttpClient.swift */; };
+		0F682B0922886882008097F2 /* FreezersHttpClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F682B0822886882008097F2 /* FreezersHttpClient.swift */; };
+		0F682B0B228875AF008097F2 /* ServiceError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F682B0A228875AF008097F2 /* ServiceError.swift */; };
+		0F682B0D228879CC008097F2 /* FreezerIdentifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F682B0C228879CC008097F2 /* FreezerIdentifier.swift */; };
+		0F7B63AB228DAF9700F2F6BA /* EnabledChangedNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F7B63AA228DAF9700F2F6BA /* EnabledChangedNotification.swift */; };
+		0F7B63AF228DB1D800F2F6BA /* ToggleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F7B63AE228DB1D800F2F6BA /* ToggleView.swift */; };
+		0FC7011A227DCE2D00893B4F /* FreezersService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FC70119227DCE2D00893B4F /* FreezersService.swift */; };
+		0FC70613227F037200893B4F /* SelectedFreezerChangedNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FC70612227F037200893B4F /* SelectedFreezerChangedNotification.swift */; };
+		0FC70615227F07EA00893B4F /* ShowListNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FC70614227F07EA00893B4F /* ShowListNotification.swift */; };
+		0FC70617227F07FE00893B4F /* ShowCarouselNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FC70616227F07FE00893B4F /* ShowCarouselNotification.swift */; };
+		0FC70AE8227FD78C00893B4F /* SlowCommon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0FC70138227DEB0A00893B4F /* SlowCommon.framework */; };
+		0FC70AE9227FD78C00893B4F /* SlowCommon.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0FC70138227DEB0A00893B4F /* SlowCommon.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		0FC7FB19227CA99C00893B4F /* FreezerListItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FC7FB18227CA99C00893B4F /* FreezerListItemCell.swift */; };
+		0FC7FB1E227CAA0300893B4F /* FreezerListItemVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FC7FB1D227CAA0300893B4F /* FreezerListItemVM.swift */; };
+		0FC7FB20227CAA4C00893B4F /* FreezerListItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0FC7FB1F227CAA4C00893B4F /* FreezerListItemCell.xib */; };
+		0FC7FBB4227D6A0E00893B4F /* SlowContainer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0FC7FBB1227D6A0200893B4F /* SlowContainer.framework */; };
+		0FC7FBB5227D6A0E00893B4F /* SlowContainer.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0FC7FBB1227D6A0200893B4F /* SlowContainer.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		0FC7FBE9227DC7E600893B4F /* SlowHelpers.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F139F8E2278AAF100B763F7 /* SlowHelpers.framework */; };
+		0FC7FBEA227DC7E600893B4F /* SlowHelpers.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0F139F8E2278AAF100B763F7 /* SlowHelpers.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		0FC7FC47227DC8CD00893B4F /* SlowMVVM.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0FC7FC44227DC8C000893B4F /* SlowMVVM.framework */; };
+		0FC7FC48227DC8CD00893B4F /* SlowMVVM.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0FC7FC44227DC8C000893B4F /* SlowMVVM.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		0FC7FC52227DCA8100893B4F /* FreezerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FC7FC51227DCA8100893B4F /* FreezerModel.swift */; };
+		0FC7FC54227DCB4200893B4F /* IFreezersService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FC7FC53227DCB4200893B4F /* IFreezersService.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		0F139F872278AAE900B763F7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0F139F832278AAE900B763F7 /* SlowControls.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 0FC3613522740F00005CDD55;
+			remoteInfo = SlowControls;
+		};
+		0F139F8D2278AAF100B763F7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0F139F892278AAF000B763F7 /* SlowHelpers.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 0F139F6F2278AA8000B763F7;
+			remoteInfo = SlowHelpers;
+		};
+		0F139F962278AB0600B763F7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0F139F832278AAE900B763F7 /* SlowControls.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 0FC3613422740F00005CDD55;
+			remoteInfo = SlowControls;
+		};
+		0FC70137227DEB0A00893B4F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0FC70133227DEB0900893B4F /* SlowCommon.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 0FC70128227DEAF200893B4F;
+			remoteInfo = SlowCommon;
+		};
+		0FC70AEA227FD78C00893B4F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0FC70133227DEB0900893B4F /* SlowCommon.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 0FC70127227DEAF200893B4F;
+			remoteInfo = SlowCommon;
+		};
+		0FC7FBB0227D6A0200893B4F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0FC7FBAB227D6A0200893B4F /* SlowContainer.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 0FC7FB36227D54B000893B4F;
+			remoteInfo = SlowContainer;
+		};
+		0FC7FBB2227D6A0200893B4F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0FC7FBAB227D6A0200893B4F /* SlowContainer.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 0FC7FB3F227D54B100893B4F;
+			remoteInfo = SlowContainerTests;
+		};
+		0FC7FBB6227D6A0E00893B4F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0FC7FBAB227D6A0200893B4F /* SlowContainer.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 0FC7FB35227D54B000893B4F;
+			remoteInfo = SlowContainer;
+		};
+		0FC7FBEB227DC7E600893B4F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0F139F892278AAF000B763F7 /* SlowHelpers.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 0F139F6E2278AA8000B763F7;
+			remoteInfo = SlowHelpers;
+		};
+		0FC7FC43227DC8C000893B4F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0FC7FC3E227DC8C000893B4F /* SlowMVVM.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 0FC7FBF7227DC83B00893B4F;
+			remoteInfo = SlowMVVM;
+		};
+		0FC7FC45227DC8C000893B4F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0FC7FC3E227DC8C000893B4F /* SlowMVVM.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 0FC7FC00227DC83B00893B4F;
+			remoteInfo = SlowMVVMTests;
+		};
+		0FC7FC49227DC8CD00893B4F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0FC7FC3E227DC8C000893B4F /* SlowMVVM.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 0FC7FBF6227DC83B00893B4F;
+			remoteInfo = SlowMVVM;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		0F139F932278AB0000B763F7 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				0F139F952278AB0600B763F7 /* SlowControls.framework in Embed Frameworks */,
+				0FC7FC48227DC8CD00893B4F /* SlowMVVM.framework in Embed Frameworks */,
+				0FC7FBB5227D6A0E00893B4F /* SlowContainer.framework in Embed Frameworks */,
+				0FC7FBEA227DC7E600893B4F /* SlowHelpers.framework in Embed Frameworks */,
+				0FC70AE9227FD78C00893B4F /* SlowCommon.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		0F139EF92278A86900B763F7 /* Doublefreeze.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Doublefreeze.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		0F139EFC2278A86900B763F7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		0F139F032278A86A00B763F7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		0F139F062278A86A00B763F7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		0F139F082278A86A00B763F7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0F139F0F2278A8E700B763F7 /* ToggleControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToggleControl.swift; sourceTree = "<group>"; };
+		0F139F122278A8F300B763F7 /* FreezerCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FreezerCell.xib; sourceTree = "<group>"; };
+		0F139F132278A8F300B763F7 /* FreezerCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FreezerCell.swift; sourceTree = "<group>"; };
+		0F139F142278A8F300B763F7 /* FreezerCarouselVM.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FreezerCarouselVM.swift; sourceTree = "<group>"; };
+		0F139F152278A8F300B763F7 /* FreezerCarouselVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FreezerCarouselVC.swift; sourceTree = "<group>"; };
+		0F139F162278A8F300B763F7 /* FreezerCellVM.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FreezerCellVM.swift; sourceTree = "<group>"; };
+		0F139F1D2278A8F900B763F7 /* FreezersListVM.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FreezersListVM.swift; sourceTree = "<group>"; };
+		0F139F1E2278A8F900B763F7 /* FreezersListVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FreezersListVC.swift; sourceTree = "<group>"; };
+		0F139F222278A90000B763F7 /* HomeVM.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeVM.swift; sourceTree = "<group>"; };
+		0F139F232278A90000B763F7 /* HomeVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
+		0F139F832278AAE900B763F7 /* SlowControls.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SlowControls.xcodeproj; path = ../SlowControls/SlowControls.xcodeproj; sourceTree = "<group>"; };
+		0F139F892278AAF000B763F7 /* SlowHelpers.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SlowHelpers.xcodeproj; path = ../SlowHelpers/SlowHelpers.xcodeproj; sourceTree = "<group>"; };
+		0F13A4612278AD7C00B763F7 /* UIColor.Palette.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.Palette.swift; sourceTree = "<group>"; };
+		0F55B161227950690057319E /* SuisseIntl-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SuisseIntl-Bold.otf"; sourceTree = "<group>"; };
+		0F55B162227951570057319E /* UIFont.Palette.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIFont.Palette.swift; sourceTree = "<group>"; };
+		0F55BAE9227958450057319E /* SuisseIntl-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SuisseIntl-Regular.otf"; sourceTree = "<group>"; };
+		0F55BAEB2279C4C60057319E /* TogleIcon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TogleIcon.swift; sourceTree = "<group>"; };
+		0F68216B2283D4BC008097F2 /* SnowFlakeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnowFlakeView.swift; sourceTree = "<group>"; };
+		0F68263722844099008097F2 /* FloorChangedNotification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloorChangedNotification.swift; sourceTree = "<group>"; };
+		0F682B0422886872008097F2 /* IFreezersHttpClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IFreezersHttpClient.swift; sourceTree = "<group>"; };
+		0F682B0822886882008097F2 /* FreezersHttpClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FreezersHttpClient.swift; sourceTree = "<group>"; };
+		0F682B0A228875AF008097F2 /* ServiceError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceError.swift; sourceTree = "<group>"; };
+		0F682B0C228879CC008097F2 /* FreezerIdentifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FreezerIdentifier.swift; sourceTree = "<group>"; };
+		0F7B63AA228DAF9700F2F6BA /* EnabledChangedNotification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnabledChangedNotification.swift; sourceTree = "<group>"; };
+		0F7B63AE228DB1D800F2F6BA /* ToggleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToggleView.swift; sourceTree = "<group>"; };
+		0FC70119227DCE2D00893B4F /* FreezersService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FreezersService.swift; sourceTree = "<group>"; };
+		0FC70133227DEB0900893B4F /* SlowCommon.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SlowCommon.xcodeproj; path = ../SlowCommon/SlowCommon.xcodeproj; sourceTree = "<group>"; };
+		0FC70612227F037200893B4F /* SelectedFreezerChangedNotification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedFreezerChangedNotification.swift; sourceTree = "<group>"; };
+		0FC70614227F07EA00893B4F /* ShowListNotification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowListNotification.swift; sourceTree = "<group>"; };
+		0FC70616227F07FE00893B4F /* ShowCarouselNotification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowCarouselNotification.swift; sourceTree = "<group>"; };
+		0FC7FB18227CA99C00893B4F /* FreezerListItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FreezerListItemCell.swift; sourceTree = "<group>"; };
+		0FC7FB1D227CAA0300893B4F /* FreezerListItemVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FreezerListItemVM.swift; sourceTree = "<group>"; };
+		0FC7FB1F227CAA4C00893B4F /* FreezerListItemCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FreezerListItemCell.xib; sourceTree = "<group>"; };
+		0FC7FBAB227D6A0200893B4F /* SlowContainer.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SlowContainer.xcodeproj; path = ../SlowContainer/SlowContainer.xcodeproj; sourceTree = "<group>"; };
+		0FC7FBBF227D6EA700893B4F /* SlowMVVM.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SlowMVVM.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0FC7FC3E227DC8C000893B4F /* SlowMVVM.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SlowMVVM.xcodeproj; path = ../SlowMVVM/SlowMVVM.xcodeproj; sourceTree = "<group>"; };
+		0FC7FC51227DCA8100893B4F /* FreezerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FreezerModel.swift; sourceTree = "<group>"; };
+		0FC7FC53227DCB4200893B4F /* IFreezersService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IFreezersService.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		0F139EF62278A86900B763F7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0F139F942278AB0600B763F7 /* SlowControls.framework in Frameworks */,
+				0FC7FC47227DC8CD00893B4F /* SlowMVVM.framework in Frameworks */,
+				0FC7FBB4227D6A0E00893B4F /* SlowContainer.framework in Frameworks */,
+				0FC7FBE9227DC7E600893B4F /* SlowHelpers.framework in Frameworks */,
+				0FC70AE8227FD78C00893B4F /* SlowCommon.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0F139EF02278A86900B763F7 = {
+			isa = PBXGroup;
+			children = (
+				0FC70133227DEB0900893B4F /* SlowCommon.xcodeproj */,
+				0FC7FC3E227DC8C000893B4F /* SlowMVVM.xcodeproj */,
+				0FC7FBAB227D6A0200893B4F /* SlowContainer.xcodeproj */,
+				0F139F892278AAF000B763F7 /* SlowHelpers.xcodeproj */,
+				0F139F832278AAE900B763F7 /* SlowControls.xcodeproj */,
+				0F139EFB2278A86900B763F7 /* Doublefreeze */,
+				0F139EFA2278A86900B763F7 /* Products */,
+				0FC7FBBE227D6EA700893B4F /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		0F139EFA2278A86900B763F7 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				0F139EF92278A86900B763F7 /* Doublefreeze.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		0F139EFB2278A86900B763F7 /* Doublefreeze */ = {
+			isa = PBXGroup;
+			children = (
+				0FC70611227F035200893B4F /* Notifications */,
+				0FC7FC50227DCA7200893B4F /* Services */,
+				0F55B15F2279505A0057319E /* Fonts */,
+				0F13A4602278AC8A00B763F7 /* Common */,
+				0F139F212278A90000B763F7 /* Home */,
+				0F139F1C2278A8F900B763F7 /* FreezersList */,
+				0F139F112278A8F300B763F7 /* FreezerCarousel */,
+				0F139F0E2278A8E700B763F7 /* Controls */,
+				0F139EFC2278A86900B763F7 /* AppDelegate.swift */,
+				0F139F032278A86A00B763F7 /* Assets.xcassets */,
+				0F139F052278A86A00B763F7 /* LaunchScreen.storyboard */,
+				0F139F082278A86A00B763F7 /* Info.plist */,
+			);
+			path = Doublefreeze;
+			sourceTree = "<group>";
+		};
+		0F139F0E2278A8E700B763F7 /* Controls */ = {
+			isa = PBXGroup;
+			children = (
+				0F139F0F2278A8E700B763F7 /* ToggleControl.swift */,
+				0F55BAEB2279C4C60057319E /* TogleIcon.swift */,
+				0F68216B2283D4BC008097F2 /* SnowFlakeView.swift */,
+			);
+			path = Controls;
+			sourceTree = "<group>";
+		};
+		0F139F112278A8F300B763F7 /* FreezerCarousel */ = {
+			isa = PBXGroup;
+			children = (
+				0F139F122278A8F300B763F7 /* FreezerCell.xib */,
+				0F139F132278A8F300B763F7 /* FreezerCell.swift */,
+				0F139F142278A8F300B763F7 /* FreezerCarouselVM.swift */,
+				0F139F152278A8F300B763F7 /* FreezerCarouselVC.swift */,
+				0F139F162278A8F300B763F7 /* FreezerCellVM.swift */,
+				0F7B63AE228DB1D800F2F6BA /* ToggleView.swift */,
+			);
+			path = FreezerCarousel;
+			sourceTree = "<group>";
+		};
+		0F139F1C2278A8F900B763F7 /* FreezersList */ = {
+			isa = PBXGroup;
+			children = (
+				0F139F1D2278A8F900B763F7 /* FreezersListVM.swift */,
+				0F139F1E2278A8F900B763F7 /* FreezersListVC.swift */,
+				0FC7FB18227CA99C00893B4F /* FreezerListItemCell.swift */,
+				0FC7FB1D227CAA0300893B4F /* FreezerListItemVM.swift */,
+				0FC7FB1F227CAA4C00893B4F /* FreezerListItemCell.xib */,
+			);
+			path = FreezersList;
+			sourceTree = "<group>";
+		};
+		0F139F212278A90000B763F7 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				0F139F222278A90000B763F7 /* HomeVM.swift */,
+				0F139F232278A90000B763F7 /* HomeVC.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		0F139F842278AAE900B763F7 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				0F139F882278AAE900B763F7 /* SlowControls.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		0F139F8A2278AAF000B763F7 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				0F139F8E2278AAF100B763F7 /* SlowHelpers.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		0F13A4602278AC8A00B763F7 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				0F13A4612278AD7C00B763F7 /* UIColor.Palette.swift */,
+				0F55B162227951570057319E /* UIFont.Palette.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		0F55B15F2279505A0057319E /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				0F55BAE9227958450057319E /* SuisseIntl-Regular.otf */,
+				0F55B161227950690057319E /* SuisseIntl-Bold.otf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		0FC70134227DEB0900893B4F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				0FC70138227DEB0A00893B4F /* SlowCommon.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		0FC70611227F035200893B4F /* Notifications */ = {
+			isa = PBXGroup;
+			children = (
+				0FC70612227F037200893B4F /* SelectedFreezerChangedNotification.swift */,
+				0FC70614227F07EA00893B4F /* ShowListNotification.swift */,
+				0FC70616227F07FE00893B4F /* ShowCarouselNotification.swift */,
+				0F68263722844099008097F2 /* FloorChangedNotification.swift */,
+				0F7B63AA228DAF9700F2F6BA /* EnabledChangedNotification.swift */,
+			);
+			path = Notifications;
+			sourceTree = "<group>";
+		};
+		0FC7FBAC227D6A0200893B4F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				0FC7FBB1227D6A0200893B4F /* SlowContainer.framework */,
+				0FC7FBB3227D6A0200893B4F /* SlowContainerTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		0FC7FBBE227D6EA700893B4F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0FC7FBBF227D6EA700893B4F /* SlowMVVM.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		0FC7FC3F227DC8C000893B4F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				0FC7FC44227DC8C000893B4F /* SlowMVVM.framework */,
+				0FC7FC46227DC8C000893B4F /* SlowMVVMTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		0FC7FC50227DCA7200893B4F /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				0FC7FC51227DCA8100893B4F /* FreezerModel.swift */,
+				0F682B0C228879CC008097F2 /* FreezerIdentifier.swift */,
+				0F682B0422886872008097F2 /* IFreezersHttpClient.swift */,
+				0F682B0822886882008097F2 /* FreezersHttpClient.swift */,
+				0FC7FC53227DCB4200893B4F /* IFreezersService.swift */,
+				0FC70119227DCE2D00893B4F /* FreezersService.swift */,
+				0F682B0A228875AF008097F2 /* ServiceError.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		0F139EF82278A86900B763F7 /* Doublefreeze */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0F139F0B2278A86A00B763F7 /* Build configuration list for PBXNativeTarget "Doublefreeze" */;
+			buildPhases = (
+				0F139EF52278A86900B763F7 /* Sources */,
+				0F139EF62278A86900B763F7 /* Frameworks */,
+				0F139EF72278A86900B763F7 /* Resources */,
+				0F139F932278AB0000B763F7 /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0F139F972278AB0600B763F7 /* PBXTargetDependency */,
+				0FC7FBB7227D6A0E00893B4F /* PBXTargetDependency */,
+				0FC7FBEC227DC7E600893B4F /* PBXTargetDependency */,
+				0FC7FC4A227DC8CD00893B4F /* PBXTargetDependency */,
+				0FC70AEB227FD78C00893B4F /* PBXTargetDependency */,
+			);
+			name = Doublefreeze;
+			productName = Doublefreeze;
+			productReference = 0F139EF92278A86900B763F7 /* Doublefreeze.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		0F139EF12278A86900B763F7 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1020;
+				LastUpgradeCheck = 1020;
+				ORGANIZATIONNAME = "Волохин Александр Сергеевич";
+				TargetAttributes = {
+					0F139EF82278A86900B763F7 = {
+						CreatedOnToolsVersion = 10.2;
+					};
+				};
+			};
+			buildConfigurationList = 0F139EF42278A86900B763F7 /* Build configuration list for PBXProject "Doublefreeze" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 0F139EF02278A86900B763F7;
+			productRefGroup = 0F139EFA2278A86900B763F7 /* Products */;
+			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 0FC70134227DEB0900893B4F /* Products */;
+					ProjectRef = 0FC70133227DEB0900893B4F /* SlowCommon.xcodeproj */;
+				},
+				{
+					ProductGroup = 0FC7FBAC227D6A0200893B4F /* Products */;
+					ProjectRef = 0FC7FBAB227D6A0200893B4F /* SlowContainer.xcodeproj */;
+				},
+				{
+					ProductGroup = 0F139F842278AAE900B763F7 /* Products */;
+					ProjectRef = 0F139F832278AAE900B763F7 /* SlowControls.xcodeproj */;
+				},
+				{
+					ProductGroup = 0F139F8A2278AAF000B763F7 /* Products */;
+					ProjectRef = 0F139F892278AAF000B763F7 /* SlowHelpers.xcodeproj */;
+				},
+				{
+					ProductGroup = 0FC7FC3F227DC8C000893B4F /* Products */;
+					ProjectRef = 0FC7FC3E227DC8C000893B4F /* SlowMVVM.xcodeproj */;
+				},
+			);
+			projectRoot = "";
+			targets = (
+				0F139EF82278A86900B763F7 /* Doublefreeze */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		0F139F882278AAE900B763F7 /* SlowControls.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = SlowControls.framework;
+			remoteRef = 0F139F872278AAE900B763F7 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		0F139F8E2278AAF100B763F7 /* SlowHelpers.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = SlowHelpers.framework;
+			remoteRef = 0F139F8D2278AAF100B763F7 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		0FC70138227DEB0A00893B4F /* SlowCommon.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = SlowCommon.framework;
+			remoteRef = 0FC70137227DEB0A00893B4F /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		0FC7FBB1227D6A0200893B4F /* SlowContainer.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = SlowContainer.framework;
+			remoteRef = 0FC7FBB0227D6A0200893B4F /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		0FC7FBB3227D6A0200893B4F /* SlowContainerTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = SlowContainerTests.xctest;
+			remoteRef = 0FC7FBB2227D6A0200893B4F /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		0FC7FC44227DC8C000893B4F /* SlowMVVM.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = SlowMVVM.framework;
+			remoteRef = 0FC7FC43227DC8C000893B4F /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		0FC7FC46227DC8C000893B4F /* SlowMVVMTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = SlowMVVMTests.xctest;
+			remoteRef = 0FC7FC45227DC8C000893B4F /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
+/* Begin PBXResourcesBuildPhase section */
+		0F139EF72278A86900B763F7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0FC7FB20227CAA4C00893B4F /* FreezerListItemCell.xib in Resources */,
+				0F55BAEA227958450057319E /* SuisseIntl-Regular.otf in Resources */,
+				0F139F072278A86A00B763F7 /* LaunchScreen.storyboard in Resources */,
+				0F139F042278A86A00B763F7 /* Assets.xcassets in Resources */,
+				0F139F172278A8F300B763F7 /* FreezerCell.xib in Resources */,
+				0F55BAE8227957190057319E /* SuisseIntl-Bold.otf in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		0F139EF52278A86900B763F7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0F139F1A2278A8F300B763F7 /* FreezerCarouselVC.swift in Sources */,
+				0FC70613227F037200893B4F /* SelectedFreezerChangedNotification.swift in Sources */,
+				0FC7FC52227DCA8100893B4F /* FreezerModel.swift in Sources */,
+				0F139F242278A90000B763F7 /* HomeVM.swift in Sources */,
+				0F139F202278A8F900B763F7 /* FreezersListVC.swift in Sources */,
+				0F55BAEC2279C4C60057319E /* TogleIcon.swift in Sources */,
+				0FC70617227F07FE00893B4F /* ShowCarouselNotification.swift in Sources */,
+				0F682B0922886882008097F2 /* FreezersHttpClient.swift in Sources */,
+				0F682B0B228875AF008097F2 /* ServiceError.swift in Sources */,
+				0FC7FB19227CA99C00893B4F /* FreezerListItemCell.swift in Sources */,
+				0F139F102278A8E700B763F7 /* ToggleControl.swift in Sources */,
+				0F13A4622278AD7C00B763F7 /* UIColor.Palette.swift in Sources */,
+				0F682B0722886872008097F2 /* IFreezersHttpClient.swift in Sources */,
+				0F68216C2283D4BC008097F2 /* SnowFlakeView.swift in Sources */,
+				0F139EFD2278A86900B763F7 /* AppDelegate.swift in Sources */,
+				0F139F1F2278A8F900B763F7 /* FreezersListVM.swift in Sources */,
+				0F7B63AF228DB1D800F2F6BA /* ToggleView.swift in Sources */,
+				0F139F1B2278A8F300B763F7 /* FreezerCellVM.swift in Sources */,
+				0FC7011A227DCE2D00893B4F /* FreezersService.swift in Sources */,
+				0F7B63AB228DAF9700F2F6BA /* EnabledChangedNotification.swift in Sources */,
+				0F139F182278A8F300B763F7 /* FreezerCell.swift in Sources */,
+				0F682B0D228879CC008097F2 /* FreezerIdentifier.swift in Sources */,
+				0FC7FB1E227CAA0300893B4F /* FreezerListItemVM.swift in Sources */,
+				0F55B163227951570057319E /* UIFont.Palette.swift in Sources */,
+				0F139F252278A90000B763F7 /* HomeVC.swift in Sources */,
+				0F68263822844099008097F2 /* FloorChangedNotification.swift in Sources */,
+				0FC70615227F07EA00893B4F /* ShowListNotification.swift in Sources */,
+				0F139F192278A8F300B763F7 /* FreezerCarouselVM.swift in Sources */,
+				0FC7FC54227DCB4200893B4F /* IFreezersService.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		0F139F972278AB0600B763F7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = SlowControls;
+			targetProxy = 0F139F962278AB0600B763F7 /* PBXContainerItemProxy */;
+		};
+		0FC70AEB227FD78C00893B4F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = SlowCommon;
+			targetProxy = 0FC70AEA227FD78C00893B4F /* PBXContainerItemProxy */;
+		};
+		0FC7FBB7227D6A0E00893B4F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = SlowContainer;
+			targetProxy = 0FC7FBB6227D6A0E00893B4F /* PBXContainerItemProxy */;
+		};
+		0FC7FBEC227DC7E600893B4F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = SlowHelpers;
+			targetProxy = 0FC7FBEB227DC7E600893B4F /* PBXContainerItemProxy */;
+		};
+		0FC7FC4A227DC8CD00893B4F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = SlowMVVM;
+			targetProxy = 0FC7FC49227DC8CD00893B4F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		0F139F052278A86A00B763F7 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0F139F062278A86A00B763F7 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		0F139F092278A86A00B763F7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		0F139F0A2278A86A00B763F7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		0F139F0C2278A86A00B763F7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 3E2BV6MQLC;
+				INFOPLIST_FILE = Doublefreeze/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.alexander.volokhin.Doublefreeze;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		0F139F0D2278A86A00B763F7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 3E2BV6MQLC;
+				INFOPLIST_FILE = Doublefreeze/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.alexander.volokhin.Doublefreeze;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		0F139EF42278A86900B763F7 /* Build configuration list for PBXProject "Doublefreeze" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0F139F092278A86A00B763F7 /* Debug */,
+				0F139F0A2278A86A00B763F7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0F139F0B2278A86A00B763F7 /* Build configuration list for PBXNativeTarget "Doublefreeze" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0F139F0C2278A86A00B763F7 /* Debug */,
+				0F139F0D2278A86A00B763F7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 0F139EF12278A86900B763F7 /* Project object */;
+}
