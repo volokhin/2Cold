@@ -115,7 +115,9 @@ class HomeVC : ViewControllerBase<HomeVM> {
 		case .changed:
 			let translation = recognizer.translation(in: self.view)
 			if (self.state == .carousel && translation.y >= 0) || (self.state == .list && translation.y <= 0) {
-				self.translateView(translation)
+				if abs(translation.y) > abs(translation.x) {
+					self.translateView(translation)
+				}
 				self.currentOffset = translation.y
 			}
 		case .cancelled, .ended, .failed:
@@ -141,7 +143,11 @@ class HomeVC : ViewControllerBase<HomeVM> {
 		if abs(velocity.y) > abs(velocity.x) {
 			newState = velocity.y > 0 ? .list : .carousel
 		} else {
-			newState = translation.y > height / 2 ? .list : .carousel
+			if self.state == .carousel {
+				newState = translation.y > height / 2 ? .list : .carousel
+			} else {
+				newState = -translation.y < height / 2 ? .list : .carousel
+			}
 		}
 
 		self.updateState(state: newState, animated: true)
