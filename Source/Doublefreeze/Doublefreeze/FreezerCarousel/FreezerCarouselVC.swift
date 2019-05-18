@@ -235,8 +235,10 @@ class FreezerCarouselVC : ViewControllerBase<FreezerCarouselVM> {
 			let index = self.viewModel?.items.firstIndex { $0 === selectedItem }
 			if let index = index {
 				let indexPath = IndexPath(row: index, section: 0)
-				self.collectionView.scrollToItem(at: indexPath, at: .centeredHorizontally, animated: false)
 				self.progressControl.selectedItemIndex = index
+				if !self.collectionView.isDragging && !self.collectionView.isDecelerating {
+					self.collectionView.scrollToItem(at: indexPath, at: .centeredHorizontally, animated: false)
+				}
 			}
 		}
 	}
@@ -337,14 +339,9 @@ extension FreezerCarouselVC : UICollectionViewDelegateFlowLayout {
 	}
 
 	func scrollViewDidScroll(_ scrollView: UIScrollView) {
-		if let selectedCell = self.selectedCell(), let path = self.collectionView.indexPath(for: selectedCell) {
-			self.progressControl.selectedItemIndex = path.row
-		}
-	}
-
-	func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
 		guard let vm = self.viewModel else { return }
 		if let selectedCell = self.selectedCell(), let path = self.collectionView.indexPath(for: selectedCell) {
+			self.progressControl.selectedItemIndex = path.row
 			if path.row >= 0 && path.row < vm.items.count {
 				vm.selectedItem = vm.items[path.row]
 			}
