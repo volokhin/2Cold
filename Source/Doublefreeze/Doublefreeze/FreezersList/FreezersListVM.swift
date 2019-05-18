@@ -10,6 +10,7 @@ class FreezersListVM : ViewControllerViewModelBase {
 	
 	var items: [FreezerListItemVM] = []
 	var onReload: (() -> Void)?
+	var onSelectedFreezerChanged: ((Int) -> Void)?
 
 	var selectedFloorIndex: Int = 0 {
 		didSet {
@@ -93,6 +94,10 @@ class FreezersListVM : ViewControllerViewModelBase {
 	private func updateCurrentFreezer(_ freezerId: FreezerIdentifier) {
 		for item in self.items {
 			item.isSelected = item.uniqueId == freezerId
+		}
+		let index = self.items.firstIndex { $0.uniqueId ==  freezerId }
+		if let index = index {
+			self.onSelectedFreezerChanged?(index)
 		}
 	}
 

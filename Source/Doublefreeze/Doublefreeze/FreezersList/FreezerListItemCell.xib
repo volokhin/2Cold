@@ -46,15 +46,24 @@
                         <color key="textColor" name="PinkishGreyDark"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BG7-2l-ZOu">
+                        <rect key="frame" x="47" y="24.5" width="26" height="26"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="26" id="CCY-Cn-cCi"/>
+                            <constraint firstAttribute="width" constant="26" id="hMJ-He-km3"/>
+                        </constraints>
+                    </view>
                 </subviews>
                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 <constraints>
                     <constraint firstItem="FLn-XQ-hP2" firstAttribute="leading" secondItem="paT-Ls-0AS" secondAttribute="trailing" constant="16" id="71d-eT-jqT"/>
                     <constraint firstItem="FLn-XQ-hP2" firstAttribute="top" secondItem="cjo-tr-e6w" secondAttribute="bottom" id="Smu-GH-Bbt"/>
+                    <constraint firstItem="BG7-2l-ZOu" firstAttribute="centerX" secondItem="paT-Ls-0AS" secondAttribute="centerX" id="bxz-zO-Bzh"/>
                     <constraint firstItem="paT-Ls-0AS" firstAttribute="centerY" secondItem="cjo-tr-e6w" secondAttribute="centerY" constant="4" id="cn9-fS-BWI"/>
                     <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="FLn-XQ-hP2" secondAttribute="bottom" constant="10" id="e7G-mm-8Qb"/>
                     <constraint firstItem="cjo-tr-e6w" firstAttribute="top" secondItem="hiu-EN-KES" secondAttribute="top" constant="10" id="g43-Nf-wPY"/>
                     <constraint firstItem="cjo-tr-e6w" firstAttribute="leading" secondItem="paT-Ls-0AS" secondAttribute="trailing" constant="16" id="hB7-99-B9J"/>
+                    <constraint firstItem="BG7-2l-ZOu" firstAttribute="centerY" secondItem="paT-Ls-0AS" secondAttribute="centerY" id="qsw-rf-nY0"/>
                 </constraints>
             </tableViewCellContentView>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -68,8 +77,9 @@
                 <outlet property="circleView" destination="paT-Ls-0AS" id="1Ik-U9-v6t"/>
                 <outlet property="freezerNameLabel" destination="FLn-XQ-hP2" id="tnZ-Io-r4V"/>
                 <outlet property="roomNameLabel" destination="cjo-tr-e6w" id="SaR-XJ-CLh"/>
+                <outlet property="selectionView" destination="BG7-2l-ZOu" id="BdL-Bz-rw5"/>
             </connections>
-            <point key="canvasLocation" x="607.97101449275362" y="162.38839285714286"/>
+            <point key="canvasLocation" x="606.52173913043487" y="162.38839285714286"/>
         </tableViewCell>
     </objects>
     <resources>

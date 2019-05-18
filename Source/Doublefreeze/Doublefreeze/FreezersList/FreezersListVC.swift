@@ -136,7 +136,15 @@ class FreezersListVC : ViewControllerBase<FreezersListVM> {
 
 		vm.onReload = {
 			[weak self] in
-			self?.tableView.reloadData()
+			guard let self = self else { return }
+			self.tableView.reloadData()
+		}
+
+		vm.onSelectedFreezerChanged = {
+			[weak self] index in
+			guard let self = self else { return }
+			guard !self.isActive else { return }
+			self.tableView.scrollToRow(at: IndexPath(row: index, section: 0), at: .top, animated: false)
 		}
 	}
 
