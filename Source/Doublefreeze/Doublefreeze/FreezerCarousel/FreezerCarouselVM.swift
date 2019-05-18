@@ -3,6 +3,7 @@ import SlowMVVM
 
 class FreezerCarouselVM : ViewControllerViewModelBase {
 
+	private var settings: IUserSettings
 	private let notificationService: INotificationService
 	private let freezersService: IFreezersService
 	private var itemsMap: [FreezerIdentifier: FreezerCellVM] = [:]
@@ -32,14 +33,21 @@ class FreezerCarouselVM : ViewControllerViewModelBase {
 		}
 	}
 
-	init(freezersService: IFreezersService, notificationService: INotificationService) {
+	init(freezersService: IFreezersService,
+		 notificationService: INotificationService,
+		 settings: IUserSettings) {
+
+		self.settings = settings
 		self.freezersService = freezersService
 		self.notificationService = notificationService
 
 		super.init()
 
+		self.selectedFloor = [5, 8].contains(settings.floor) ? settings.floor : 5
+
 		self.createItems()
-		self.selectedItem = self.items.count > 0 ? self.items[0] : nil
+		let selectedItemId = FreezerIdentifier(floor: settings.floor, id: settings.freezerId)
+		self.selectedItem = self.itemsMap[selectedItemId] ?? (self.items.count > 0 ? self.items[0] : nil)
 		self.changeSelectedItem()
 
 		self.notificationService.subscribe(self, to: FloorChangedNotification.self) {
@@ -74,6 +82,7 @@ class FreezerCarouselVM : ViewControllerViewModelBase {
 
 	private func changeSelectedItem() {
 		guard let item = self.selectedItem else { return }
+		self.settings.freezerId = item.id
 		self.notificationService.broadcast(SelectedFreezerChangedNotification(freezerId: item.uniqueId))
 		self.viewModelChanged.raise()
 	}

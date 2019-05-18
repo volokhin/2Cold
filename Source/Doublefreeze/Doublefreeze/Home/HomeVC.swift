@@ -21,13 +21,11 @@ class HomeVC : ViewControllerBase<HomeVM> {
 
 	private lazy var freezersListVC: FreezersListVC = {
 		let vc = FreezersListVC()
-		vc.viewModel = self.viewModel?.listVM
 		return vc
 	}()
 
 	private lazy var freezerCarouselVC: FreezerCarouselVC = {
 		let vc = FreezerCarouselVC()
-		vc.viewModel = self.viewModel?.carouselVM
 		return vc
 	}()
 
@@ -84,6 +82,12 @@ class HomeVC : ViewControllerBase<HomeVM> {
 
 	override func viewSafeAreaInsetsDidChange() {
 		super.viewSafeAreaInsetsDidChange()
+	}
+
+	override func viewModelChanged() {
+		super.viewModelChanged()
+		self.freezersListVC.viewModel = self.viewModel?.listVM
+		self.freezerCarouselVC.viewModel = self.viewModel?.carouselVM
 	}
 
 	private func updateState(state: State, animated: Bool) {

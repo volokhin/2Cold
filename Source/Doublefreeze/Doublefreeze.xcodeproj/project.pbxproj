@@ -35,6 +35,8 @@
 		0F682B0D228879CC008097F2 /* FreezerIdentifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F682B0C228879CC008097F2 /* FreezerIdentifier.swift */; };
 		0F7B63AB228DAF9700F2F6BA /* EnabledChangedNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F7B63AA228DAF9700F2F6BA /* EnabledChangedNotification.swift */; };
 		0F7B63AF228DB1D800F2F6BA /* ToggleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F7B63AE228DB1D800F2F6BA /* ToggleView.swift */; };
+		0F983695228F0FFE00057114 /* IUserSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F983694228F0FFE00057114 /* IUserSettings.swift */; };
+		0F983699228F100B00057114 /* UserSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F983698228F100B00057114 /* UserSettings.swift */; };
 		0FC7011A227DCE2D00893B4F /* FreezersService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FC70119227DCE2D00893B4F /* FreezersService.swift */; };
 		0FC70613227F037200893B4F /* SelectedFreezerChangedNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FC70612227F037200893B4F /* SelectedFreezerChangedNotification.swift */; };
 		0FC70615227F07EA00893B4F /* ShowListNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FC70614227F07EA00893B4F /* ShowListNotification.swift */; };
@@ -190,6 +192,8 @@
 		0F682B0C228879CC008097F2 /* FreezerIdentifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FreezerIdentifier.swift; sourceTree = "<group>"; };
 		0F7B63AA228DAF9700F2F6BA /* EnabledChangedNotification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnabledChangedNotification.swift; sourceTree = "<group>"; };
 		0F7B63AE228DB1D800F2F6BA /* ToggleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToggleView.swift; sourceTree = "<group>"; };
+		0F983694228F0FFE00057114 /* IUserSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IUserSettings.swift; sourceTree = "<group>"; };
+		0F983698228F100B00057114 /* UserSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSettings.swift; sourceTree = "<group>"; };
 		0FC70119227DCE2D00893B4F /* FreezersService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FreezersService.swift; sourceTree = "<group>"; };
 		0FC70133227DEB0900893B4F /* SlowCommon.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SlowCommon.xcodeproj; path = ../SlowCommon/SlowCommon.xcodeproj; sourceTree = "<group>"; };
 		0FC70612227F037200893B4F /* SelectedFreezerChangedNotification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedFreezerChangedNotification.swift; sourceTree = "<group>"; };
@@ -396,6 +400,8 @@
 				0FC7FC53227DCB4200893B4F /* IFreezersService.swift */,
 				0FC70119227DCE2D00893B4F /* FreezersService.swift */,
 				0F682B0A228875AF008097F2 /* ServiceError.swift */,
+				0F983694228F0FFE00057114 /* IUserSettings.swift */,
+				0F983698228F100B00057114 /* UserSettings.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -557,6 +563,7 @@
 				0F139F1A2278A8F300B763F7 /* FreezerCarouselVC.swift in Sources */,
 				0FC70613227F037200893B4F /* SelectedFreezerChangedNotification.swift in Sources */,
 				0FC7FC52227DCA8100893B4F /* FreezerModel.swift in Sources */,
+				0F983695228F0FFE00057114 /* IUserSettings.swift in Sources */,
 				0F139F242278A90000B763F7 /* HomeVM.swift in Sources */,
 				0F139F202278A8F900B763F7 /* FreezersListVC.swift in Sources */,
 				0F55BAEC2279C4C60057319E /* TogleIcon.swift in Sources */,
@@ -575,6 +582,7 @@
 				0FC7011A227DCE2D00893B4F /* FreezersService.swift in Sources */,
 				0F7B63AB228DAF9700F2F6BA /* EnabledChangedNotification.swift in Sources */,
 				0F139F182278A8F300B763F7 /* FreezerCell.swift in Sources */,
+				0F983699228F100B00057114 /* UserSettings.swift in Sources */,
 				0F682B0D228879CC008097F2 /* FreezerIdentifier.swift in Sources */,
 				0FC7FB1E227CAA0300893B4F /* FreezerListItemVM.swift in Sources */,
 				0F55B163227951570057319E /* UIFont.Palette.swift in Sources */,

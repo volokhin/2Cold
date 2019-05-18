@@ -18,6 +18,7 @@ public class CarouselProgressControl : UIControl {
 	public var itemsCount: Int = 10 {
 		didSet {
 			if oldValue != self.itemsCount {
+				self.collectionView.contentInset = UIEdgeInsets(top: 0, left: self.sideOffset, bottom: 0, right: self.sideOffset)
 				self.collectionView.reloadData()
 			}
 		}
@@ -39,8 +40,15 @@ public class CarouselProgressControl : UIControl {
 		}
 	}
 
+	public override var intrinsicContentSize: CGSize {
+		let width = self.itemDiameter * CGFloat(self.visibleItemsCount) + self.itemsOffset * CGFloat(self.visibleItemsCount - 1)
+		let height = self.itemDiameter
+		return CGSize(width: width, height: height)
+	}
+
 	private var sideOffset: CGFloat {
-		return self.itemDiameter * 2 + self.itemsOffset * 2
+		let allItemsWidth = self.itemDiameter * CGFloat(self.itemsCount) + self.itemsOffset * CGFloat(self.itemsCount - 1)
+		return allItemsWidth > self.intrinsicContentSize.width ? self.itemDiameter * 2 + self.itemsOffset * 2 : 0
 	}
 
 	private lazy var collectionViewLayout: UICollectionViewFlowLayout = {
@@ -63,11 +71,7 @@ public class CarouselProgressControl : UIControl {
 		return collectionView
 	}()
 
-	public override var intrinsicContentSize: CGSize {
-		let width = self.itemDiameter * CGFloat(self.visibleItemsCount) + self.itemsOffset * CGFloat(self.visibleItemsCount - 1)
-		let height = self.itemDiameter
-		return CGSize(width: width, height: height)
-	}
+	private var firstCellLoaded: Bool = false
 
 	public override init(frame: CGRect) {
 		super.init(frame: frame)
@@ -165,6 +169,10 @@ extension CarouselProgressControl : UICollectionViewDataSource {
 	}
 
 	public func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+		if !self.firstCellLoaded {
+			self.firstCellLoaded = true
+			self.updateScrollPosition()
+		}
 		let cell = self.collectionView.dequeueReusableCell(withReuseIdentifier: "default", for: indexPath)
 		if let cell = cell as? CarouselProgressItemCell {
 			self.updateCell(cell, indexPath: indexPath)
@@ -191,6 +199,13 @@ extension CarouselProgressControl : UICollectionViewDelegateFlowLayout {
 		for cell in cells {
 			self.updateScaleFactor(for: cell)
 		}
+	}
+
+	public func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+		let allItemsWidth = self.itemDiameter * CGFloat(self.itemsCount) + self.itemsOffset * CGFloat(self.itemsCount - 1)
+		let leftInset = max((collectionView.frame.width - allItemsWidth) / 2, 0)
+		let rightInset = leftInset
+		return UIEdgeInsets(top: 0, left: leftInset, bottom: 0, right: rightInset)
 	}
 }
 

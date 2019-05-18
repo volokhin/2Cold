@@ -11,6 +11,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 	override init() {
 		super.init()
 
+		self.container.register(IUserSettings.self)
+			.withInit(UserSettings.init)
+		
 		self.container.register(IFreezersHttpClient.self)
 			.withInit(FreezersHttpClient.init)
 			.singleInstance()

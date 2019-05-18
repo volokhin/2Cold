@@ -3,6 +3,7 @@ import SlowMVVM
 
 class FreezersListVM : ViewControllerViewModelBase {
 
+	private var settings: IUserSettings
 	private let freezersService: IFreezersService
 	private let notificationService: INotificationService
 	private var itemsMap: [FreezerIdentifier: FreezerListItemVM] = [:]
@@ -35,11 +36,17 @@ class FreezersListVM : ViewControllerViewModelBase {
 		}
 	}()
 
-	init(freezersService: IFreezersService, notificationService: INotificationService) {
+	init(freezersService: IFreezersService,
+		 notificationService: INotificationService,
+		 settings: IUserSettings) {
+
+		self.settings = settings
 		self.freezersService = freezersService
 		self.notificationService = notificationService
 
 		super.init()
+
+		self.selectedFloorIndex = settings.floor == 8 ? 1 : 0
 		
 		self.createItems()
 
@@ -60,6 +67,7 @@ class FreezersListVM : ViewControllerViewModelBase {
 	}
 
 	private func changeFloor() {
+		self.settings.floor = self.selectedFloor
 		self.createItems()
 		self.onReload?()
 		self.notificationService.broadcast(FloorChangedNotification(floor: self.selectedFloor))

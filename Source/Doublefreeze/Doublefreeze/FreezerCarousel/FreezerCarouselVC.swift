@@ -78,6 +78,7 @@ class FreezerCarouselVC : ViewControllerBase<FreezerCarouselVM> {
 	}()
 
 	private var strokeViews: [UIView] = []
+	private var isFirstCellLoaded: Bool = false
 
 	private var isCurrentFreezerEnabled: Bool = false {
 		didSet {
@@ -219,6 +220,17 @@ class FreezerCarouselVC : ViewControllerBase<FreezerCarouselVM> {
 		self.toggleView.viewModel = vm.selectedItem
 		self.isCurrentFreezerEnabled = vm.selectedItem?.isEnabled ?? false
 
+		self.updateSelectedItem()
+
+		vm.onReload = {
+			[weak self] in
+			self?.progressControl.itemsCount = vm.items.count
+			self?.collectionView.reloadData()
+		}
+	}
+
+	private func updateSelectedItem() {
+		guard let vm = self.viewModel else { return }
 		if let selectedItem = vm.selectedItem {
 			let index = self.viewModel?.items.firstIndex { $0 === selectedItem }
 			if let index = index {
@@ -226,12 +238,6 @@ class FreezerCarouselVC : ViewControllerBase<FreezerCarouselVM> {
 				self.collectionView.scrollToItem(at: indexPath, at: .centeredHorizontally, animated: false)
 				self.progressControl.selectedItemIndex = index
 			}
-		}
-
-		vm.onReload = {
-			[weak self] in
-			self?.progressControl.itemsCount = vm.items.count
-			self?.collectionView.reloadData()
 		}
 	}
 
@@ -311,6 +317,10 @@ extension FreezerCarouselVC : UICollectionViewDataSource {
 	}
 
 	func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+		if !self.isFirstCellLoaded {
+			self.isFirstCellLoaded = true
+			self.updateSelectedItem()
+		}
 		let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "FreezerCell", for: indexPath)
 		if var cell = cell as? IHaveViewModel {
 			let item = self.viewModel?.items[indexPath.row]
