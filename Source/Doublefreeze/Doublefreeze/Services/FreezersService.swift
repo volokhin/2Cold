@@ -4,7 +4,7 @@ import SlowCommon
 
 class FreezersService : IFreezersService {
 
-	private var cache: [FreezerModel] = [
+	private var fallbackCache: [FreezerModel] = [
 		// 8 этаж
 		FreezerModel(id: 2, place: "D&R", name: "Кирилл", floor: 8),
 		FreezerModel(id: 4, place: "Кухня", name: "Светлана", floor: 8),
@@ -25,12 +25,19 @@ class FreezersService : IFreezersService {
 		FreezerModel(id: 14, place: "Карта", name: "???", floor: 5),
 	]
 
+	private lazy var cache: [FreezerModel] = {
+		let cache = self.settings.cache
+		return cache.count > 0 ? cache : self.fallbackCache
+	}()
+
 	let updated: Event<[FreezerModel]> = .init()
 
 	private let httpClient: IFreezersHttpClient
+	private var settings: IUserSettings
 
-	init(httpClient: IFreezersHttpClient) {
+	init(httpClient: IFreezersHttpClient, settings: IUserSettings) {
 		self.httpClient = httpClient
+		self.settings = settings
 	}
 
 	func freezers() -> [FreezerModel] {
@@ -65,6 +72,7 @@ class FreezersService : IFreezersService {
 		switch result {
 		case .success(let freezers):
 			self.cache = freezers
+			self.settings.cache = freezers
 		case .failure(let error):
 			print(error)
 			break

@@ -13,13 +13,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 		self.container.register(IUserSettings.self)
 			.withInit(UserSettings.init)
+			.singleInstance()
 		
 		self.container.register(IFreezersHttpClient.self)
 			.withInit(FreezersHttpClient.init)
 			.singleInstance()
 
 		self.container.register(IFreezersService.self)
-			.withFactory { FreezersService(httpClient: $0.resolve(IFreezersHttpClient.self)!) }
+			.withInit(FreezersService.init)
 			.singleInstance()
 
 		self.container.register(INotificationService.self)

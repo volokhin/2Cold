@@ -43,11 +43,12 @@ class FreezerCarouselVM : ViewControllerViewModelBase {
 
 		super.init()
 
-		self.selectedFloor = [5, 8].contains(settings.floor) ? settings.floor : 5
+		let savedFreezer = settings.freezerId ?? FreezerIdentifier(floor: 5, id: 10)
+		self.selectedFloor = savedFreezer.floor
 
 		self.createItems()
-		let selectedItemId = FreezerIdentifier(floor: settings.floor, id: settings.freezerId)
-		self.selectedItem = self.itemsMap[selectedItemId] ?? (self.items.count > 0 ? self.items[0] : nil)
+		self.selectedItem = self.itemsMap[savedFreezer] ?? (self.items.count > 0 ? self.items[0] : nil)
+
 		self.changeSelectedItem()
 
 		self.notificationService.subscribe(self, to: FloorChangedNotification.self) {
@@ -82,7 +83,7 @@ class FreezerCarouselVM : ViewControllerViewModelBase {
 
 	private func changeSelectedItem() {
 		guard let item = self.selectedItem else { return }
-		self.settings.freezerId = item.id
+		self.settings.freezerId = item.uniqueId
 		self.notificationService.broadcast(SelectedFreezerChangedNotification(freezerId: item.uniqueId))
 		self.viewModelChanged.raise()
 	}

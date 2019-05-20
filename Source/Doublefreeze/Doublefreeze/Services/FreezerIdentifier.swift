@@ -1,6 +1,6 @@
 import Foundation
 
-struct FreezerIdentifier : Hashable {
+struct FreezerIdentifier : Hashable, Codable {
 
 	let id: Int
 	let floor: Int

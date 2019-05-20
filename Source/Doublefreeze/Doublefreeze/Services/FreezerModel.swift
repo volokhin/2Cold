@@ -1,6 +1,6 @@
 import Foundation
 
-struct FreezerModel : Decodable {
+struct FreezerModel : Codable {
 	
 	let id: Int
 	let isEnabled: Bool

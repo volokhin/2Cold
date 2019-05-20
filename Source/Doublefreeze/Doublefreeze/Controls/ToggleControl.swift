@@ -112,19 +112,11 @@ class ToggleControl : UIControl {
 			self.togleIcon.centerYAnchor.constraint(equalTo: self.circleView.centerYAnchor)
 		)
 
-//		self.addTarget(self, action: #selector(self.touchDown), for: .touchDown)
-//		self.addTarget(self, action: #selector(self.touchUpInside), for: .touchUpInside)
-//		self.addTarget(self, action: #selector(self.touchCancel), for: .touchUpOutside)
-
 		let pan = UIPanGestureRecognizer(target: self, action: #selector(self.pan))
 		self.addGestureRecognizer(pan)
 
 		let tap = UITapGestureRecognizer(target: self, action: #selector(self.tap))
 		self.addGestureRecognizer(tap)
-
-//		let tapRecognizer = UITapGestureRecognizer(target: self, action: <#T##Selector?#>)
-//		tapRecognizer.delegate
-
 	}
 
 	required init?(coder aDecoder: NSCoder) {
@@ -151,7 +143,7 @@ class ToggleControl : UIControl {
 
 		let timing = UISpringTimingParameters(damping: 1, response: 0.3)
 		let animator = UIViewPropertyAnimator(duration: 0.4, timingParameters: timing)
-		let offset = self.bounds.width - self.circleView.bounds.width - 32
+		let offset = self.intrinsicContentSize.width - 82 - 32
 		animator.addAnimations {
 			self.circleView.transform = CGAffineTransform(translationX: isSelected ? offset : 0, y: 0)
 			self.innerView.backgroundColor = isSelected ? .darkSkyBlue : .orangeyRed
@@ -164,29 +156,8 @@ class ToggleControl : UIControl {
 		}
 	}
 
-	@objc private func touchDown() {
-		//print("touchDown")
-	}
-
-	@objc private func touchUpInside() {
-		//print("touchUpInside")
-	}
-
-	@objc private func touchCancel() {
-		//print("touchCancel")
-	}
-
 	@objc private func pan(recognizer: UIPanGestureRecognizer) {
 		switch recognizer.state {
-		case .began:
-//			let point = recognizer.translation(in: self)
-//			if abs(point.x) > abs(point.y) {
-//				self.isSelected = point.x > 0
-//			}
-			break
-		case .cancelled:
-			//print("cancelled")
-			break
 		case .changed:
 			let point = recognizer.translation(in: self)
 			if abs(point.x) > abs(point.y) {
@@ -194,41 +165,14 @@ class ToggleControl : UIControl {
 				self.generateHapticsFeedback(for: isSelected)
 				self.isSelected = isSelected
 			}
-		case .ended:
-			//print("ended")
+		default:
 			break
-		case .failed:
-			//print("failed")
-			break
-		case .possible:
-			//print("possible")
-			break
-		@unknown default:
-			fatalError()
 		}
 	}
 
 	@objc private func tap(recognizer: UITapGestureRecognizer) {
 		self.generateHapticsFeedback(for: !self.isSelected)
 		self.isSelected = !self.isSelected
-
-
-//		switch recognizer.state {
-//		case .began:
-//			print("began")
-//		case .cancelled:
-//			print("cancelled")
-//		case .changed:
-//			print("changed")
-//		case .ended:
-//			print("ended")
-//		case .failed:
-//			print("failed")
-//		case .possible:
-//			print("possible")
-//		@unknown default:
-//			fatalError()
-//		}
 	}
 
 	private func generateHapticsFeedback(for value: Bool) {

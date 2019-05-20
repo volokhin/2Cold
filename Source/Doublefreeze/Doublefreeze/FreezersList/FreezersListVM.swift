@@ -47,7 +47,7 @@ class FreezersListVM : ViewControllerViewModelBase {
 
 		super.init()
 
-		self.selectedFloorIndex = settings.floor == 8 ? 1 : 0
+		self.selectedFloorIndex = settings.freezerId?.floor == 8 ? 1 : 0
 		
 		self.createItems()
 
@@ -68,7 +68,6 @@ class FreezersListVM : ViewControllerViewModelBase {
 	}
 
 	private func changeFloor() {
-		self.settings.floor = self.selectedFloor
 		self.createItems()
 		self.onReload?()
 		self.notificationService.broadcast(FloorChangedNotification(floor: self.selectedFloor))
