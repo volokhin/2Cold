@@ -3,6 +3,8 @@ import SlowMVVM
 
 class ToggleView : ViewBase<FreezerCellVM> {
 
+	private var isFirstTimeStateSet: Bool = true
+
 	private lazy var toggleControl: ToggleControl = {
 		let control = ToggleControl(frame: .zero)
 		control.isSelectedChanged = {
@@ -33,7 +35,8 @@ class ToggleView : ViewBase<FreezerCellVM> {
 	internal override func viewModelChanged() {
 		super.viewModelChanged()
 		guard let vm = self.viewModel else { return }
-		self.toggleControl.setState(isSelected: vm.isEnabled, animated: true)
+		self.toggleControl.setState(isSelected: vm.isEnabled, animated: !self.isFirstTimeStateSet)
+		self.isFirstTimeStateSet = false
 	}
 
 }

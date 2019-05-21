@@ -2,8 +2,8 @@ import Foundation
 
 class FreezersHttpClient : IFreezersHttpClient {
 
-	//private let baseUrlString = "http://localhost:5000/api/freezers"
-	private let baseUrlString = "http://157.230.208.168/api/freezers"
+	//private let baseUrlString = "http://localhost:5000/api/ac"
+	private let baseUrlString = "http://157.230.208.168/api/ac"
 
 	private let decoder = JSONDecoder()
 

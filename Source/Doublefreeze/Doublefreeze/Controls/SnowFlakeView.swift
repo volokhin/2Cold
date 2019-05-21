@@ -76,17 +76,17 @@ class SnowFlakeView : UIView {
 	private func setupSnowflakeEmitterCell() {
 		self.snowflakeEmitterCell.color = UIColor.white.cgColor
 		self.snowflakeEmitterCell.contents = #imageLiteral(resourceName: "snowflake").cgImage
-		self.snowflakeEmitterCell.lifetime = 10
-		self.snowflakeEmitterCell.birthRate = 200
+		self.snowflakeEmitterCell.lifetime = 15
+		self.snowflakeEmitterCell.birthRate = 150
 		self.snowflakeEmitterCell.blueRange = 0.15
 		self.snowflakeEmitterCell.alphaRange = 0.8
 		self.snowflakeEmitterCell.velocity = 10
 		self.snowflakeEmitterCell.velocityRange = 300
 		self.snowflakeEmitterCell.scale = 0.2
-		self.snowflakeEmitterCell.scaleRange = 1
+		self.snowflakeEmitterCell.scaleRange = 0.5
 		self.snowflakeEmitterCell.emissionRange = CGFloat.pi / 2
 		self.snowflakeEmitterCell.emissionLongitude = CGFloat.pi
-		self.snowflakeEmitterCell.yAcceleration = 20
+		self.snowflakeEmitterCell.yAcceleration = 15
 		self.snowflakeEmitterCell.scaleSpeed = -0.1
 		self.snowflakeEmitterCell.alphaSpeed = -0.05
 	}

@@ -28,7 +28,7 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="paT-Ls-0AS">
-                        <rect key="frame" x="52" y="29.5" width="16" height="16"/>
+                        <rect key="frame" x="52" y="25.5" width="16" height="16"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="16" id="7mL-Y3-K5E"/>
                             <constraint firstAttribute="height" constant="16" id="kRQ-nf-A73"/>
@@ -40,14 +40,14 @@
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Мария" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FLn-XQ-hP2">
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Мария" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FLn-XQ-hP2">
                         <rect key="frame" x="84" y="57" width="249" height="26"/>
                         <fontDescription key="fontDescription" name="SuisseIntl-Regular" family="Suisse Int'l" pointSize="20"/>
                         <color key="textColor" name="PinkishGreyDark"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BG7-2l-ZOu">
-                        <rect key="frame" x="47" y="24.5" width="26" height="26"/>
+                        <rect key="frame" x="47" y="20.5" width="26" height="26"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="26" id="CCY-Cn-cCi"/>
                             <constraint firstAttribute="width" constant="26" id="hMJ-He-km3"/>
@@ -59,7 +59,7 @@
                     <constraint firstItem="FLn-XQ-hP2" firstAttribute="leading" secondItem="paT-Ls-0AS" secondAttribute="trailing" constant="16" id="71d-eT-jqT"/>
                     <constraint firstItem="FLn-XQ-hP2" firstAttribute="top" secondItem="cjo-tr-e6w" secondAttribute="bottom" id="Smu-GH-Bbt"/>
                     <constraint firstItem="BG7-2l-ZOu" firstAttribute="centerX" secondItem="paT-Ls-0AS" secondAttribute="centerX" id="bxz-zO-Bzh"/>
-                    <constraint firstItem="paT-Ls-0AS" firstAttribute="centerY" secondItem="cjo-tr-e6w" secondAttribute="centerY" constant="4" id="cn9-fS-BWI"/>
+                    <constraint firstItem="paT-Ls-0AS" firstAttribute="centerY" secondItem="cjo-tr-e6w" secondAttribute="centerY" id="cn9-fS-BWI"/>
                     <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="FLn-XQ-hP2" secondAttribute="bottom" constant="10" id="e7G-mm-8Qb"/>
                     <constraint firstItem="cjo-tr-e6w" firstAttribute="top" secondItem="hiu-EN-KES" secondAttribute="top" constant="10" id="g43-Nf-wPY"/>
                     <constraint firstItem="cjo-tr-e6w" firstAttribute="leading" secondItem="paT-Ls-0AS" secondAttribute="trailing" constant="16" id="hB7-99-B9J"/>
