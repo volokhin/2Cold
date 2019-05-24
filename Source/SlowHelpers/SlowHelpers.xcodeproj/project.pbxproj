@@ -13,7 +13,6 @@
 		0F55AC9C227949D60057319E /* UISpringTimingParameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F55AC9B227949D60057319E /* UISpringTimingParameters.swift */; };
 		0F55BAEE227A0BB90057319E /* NSLayoutConstraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F55BAED227A0BB90057319E /* NSLayoutConstraint.swift */; };
 		0FF501282281CE98002923A8 /* ViewController.Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FF501272281CE97002923A8 /* ViewController.Helpers.swift */; };
-		0FF5012A2281CFC5002923A8 /* ViewController.Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FF501292281CFC5002923A8 /* ViewController.Helpers.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,7 +24,6 @@
 		0F55AC9B227949D60057319E /* UISpringTimingParameters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UISpringTimingParameters.swift; sourceTree = "<group>"; };
 		0F55BAED227A0BB90057319E /* NSLayoutConstraint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSLayoutConstraint.swift; sourceTree = "<group>"; };
 		0FF501272281CE97002923A8 /* ViewController.Helpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.Helpers.swift; sourceTree = "<group>"; };
-		0FF501292281CFC5002923A8 /* ViewController.Helpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.Helpers.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,7 +57,6 @@
 			isa = PBXGroup;
 			children = (
 				0F139F722278AA8000B763F7 /* SlowHelpers.h */,
-				0FF501292281CFC5002923A8 /* ViewController.Helpers.swift */,
 				0F139F732278AA8000B763F7 /* Info.plist */,
 				0F13A45E2278ABA200B763F7 /* UIColor.swift */,
 				0F13A4632278AFF300B763F7 /* UIView.swift */,
@@ -152,7 +149,6 @@
 				0F55AC9C227949D60057319E /* UISpringTimingParameters.swift in Sources */,
 				0FF501282281CE98002923A8 /* ViewController.Helpers.swift in Sources */,
 				0F13A45F2278ABA200B763F7 /* UIColor.swift in Sources */,
-				0FF5012A2281CFC5002923A8 /* ViewController.Helpers.swift in Sources */,
 				0F13A4642278AFF300B763F7 /* UIView.swift in Sources */,
 				0F55BAEE227A0BB90057319E /* NSLayoutConstraint.swift in Sources */,
 			);
@@ -296,7 +292,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = SlowHelpers/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -324,7 +320,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = SlowHelpers/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

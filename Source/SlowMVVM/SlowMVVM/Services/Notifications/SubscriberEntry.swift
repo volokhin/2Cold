@@ -11,7 +11,7 @@ class SubscriberEntry<Message> : ISubscriberEntry {
 	}
 
 	init(subscriber: AnyObject, handler: @escaping (Message) -> Void) {
-		self.subscriber = Weak(value: subscriber)
+		self.subscriber = Weak(subscriber)
 		self.handler = handler
 	}
 

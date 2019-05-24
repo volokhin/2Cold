@@ -34,6 +34,7 @@
 		0FC7FBA4227D590300893B4F /* TestData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FC7FBA0227D590300893B4F /* TestData.swift */; };
 		0FC7FBA6227D590300893B4F /* LogMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FC7FBA2227D590300893B4F /* LogMock.swift */; };
 		0FC7FBAA227D639C00893B4F /* IContainerEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FC7FBA9227D639C00893B4F /* IContainerEntry.swift */; };
+		0FF3B8A522984241006D9098 /* SlowCommon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0FF3B8A422984241006D9098 /* SlowCommon.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,6 +78,7 @@
 		0FC7FBA0227D590300893B4F /* TestData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestData.swift; sourceTree = "<group>"; };
 		0FC7FBA2227D590300893B4F /* LogMock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogMock.swift; sourceTree = "<group>"; };
 		0FC7FBA9227D639C00893B4F /* IContainerEntry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IContainerEntry.swift; sourceTree = "<group>"; };
+		0FF3B8A422984241006D9098 /* SlowCommon.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SlowCommon.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +86,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0FF3B8A522984241006D9098 /* SlowCommon.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -104,6 +107,7 @@
 				0FC7FB38227D54B000893B4F /* SlowContainer */,
 				0FC7FB43227D54B100893B4F /* SlowContainerTests */,
 				0FC7FB37227D54B000893B4F /* Products */,
+				0FF3B89D22984081006D9098 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -172,6 +176,14 @@
 				0FC7FBA2227D590300893B4F /* LogMock.swift */,
 			);
 			path = Mocks;
+			sourceTree = "<group>";
+		};
+		0FF3B89D22984081006D9098 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0FF3B8A422984241006D9098 /* SlowCommon.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -464,7 +476,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = SlowContainer/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -492,7 +504,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = SlowContainer/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

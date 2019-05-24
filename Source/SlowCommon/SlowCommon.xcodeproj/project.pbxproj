@@ -12,7 +12,20 @@
 		0FC7013C227DEB5800893B4F /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FC7013B227DEB5700893B4F /* Event.swift */; };
 		0FC7061D227F09F800893B4F /* IHaveAssociatedObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FC7061C227F09F800893B4F /* IHaveAssociatedObject.swift */; };
 		0FC7061F227F0A2C00893B4F /* AssociationPolicy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FC7061E227F0A2C00893B4F /* AssociationPolicy.swift */; };
+		0FF3B893229826FB006D9098 /* EventTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FF3B892229826FB006D9098 /* EventTests.swift */; };
+		0FF3B895229826FB006D9098 /* SlowCommon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0FC70128227DEAF200893B4F /* SlowCommon.framework */; };
+		0FF3B89C22983168006D9098 /* AssociatedObjectsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FF3B89B22983168006D9098 /* AssociatedObjectsTests.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		0FF3B896229826FB006D9098 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0FC7011F227DEAF200893B4F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0FC70127227DEAF200893B4F;
+			remoteInfo = SlowCommon;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		0FC70128227DEAF200893B4F /* SlowCommon.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SlowCommon.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -22,6 +35,10 @@
 		0FC7013B227DEB5700893B4F /* Event.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
 		0FC7061C227F09F800893B4F /* IHaveAssociatedObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IHaveAssociatedObject.swift; sourceTree = "<group>"; };
 		0FC7061E227F0A2C00893B4F /* AssociationPolicy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssociationPolicy.swift; sourceTree = "<group>"; };
+		0FF3B890229826FB006D9098 /* SlowCommonTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SlowCommonTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		0FF3B892229826FB006D9098 /* EventTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventTests.swift; sourceTree = "<group>"; };
+		0FF3B894229826FB006D9098 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0FF3B89B22983168006D9098 /* AssociatedObjectsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssociatedObjectsTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -32,6 +49,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		0FF3B88D229826FB006D9098 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0FF3B895229826FB006D9098 /* SlowCommon.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -39,6 +64,7 @@
 			isa = PBXGroup;
 			children = (
 				0FC7012A227DEAF200893B4F /* SlowCommon */,
+				0FF3B891229826FB006D9098 /* SlowCommonTests */,
 				0FC70129227DEAF200893B4F /* Products */,
 			);
 			sourceTree = "<group>";
@@ -47,6 +73,7 @@
 			isa = PBXGroup;
 			children = (
 				0FC70128227DEAF200893B4F /* SlowCommon.framework */,
+				0FF3B890229826FB006D9098 /* SlowCommonTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -70,6 +97,16 @@
 				0FC7061E227F0A2C00893B4F /* AssociationPolicy.swift */,
 			);
 			path = AssociatedObjects;
+			sourceTree = "<group>";
+		};
+		0FF3B891229826FB006D9098 /* SlowCommonTests */ = {
+			isa = PBXGroup;
+			children = (
+				0FF3B89B22983168006D9098 /* AssociatedObjectsTests.swift */,
+				0FF3B892229826FB006D9098 /* EventTests.swift */,
+				0FF3B894229826FB006D9098 /* Info.plist */,
+			);
+			path = SlowCommonTests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -104,18 +141,40 @@
 			productReference = 0FC70128227DEAF200893B4F /* SlowCommon.framework */;
 			productType = "com.apple.product-type.framework";
 		};
+		0FF3B88F229826FB006D9098 /* SlowCommonTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0FF3B898229826FB006D9098 /* Build configuration list for PBXNativeTarget "SlowCommonTests" */;
+			buildPhases = (
+				0FF3B88C229826FB006D9098 /* Sources */,
+				0FF3B88D229826FB006D9098 /* Frameworks */,
+				0FF3B88E229826FB006D9098 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0FF3B897229826FB006D9098 /* PBXTargetDependency */,
+			);
+			name = SlowCommonTests;
+			productName = SlowCommonTests;
+			productReference = 0FF3B890229826FB006D9098 /* SlowCommonTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
 		0FC7011F227DEAF200893B4F /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 1020;
 				LastUpgradeCheck = 1020;
 				ORGANIZATIONNAME = "Волохин Александр Сергеевич";
 				TargetAttributes = {
 					0FC70127227DEAF200893B4F = {
 						CreatedOnToolsVersion = 10.2.1;
 						LastSwiftMigration = 1020;
+					};
+					0FF3B88F229826FB006D9098 = {
+						CreatedOnToolsVersion = 10.2.1;
 					};
 				};
 			};
@@ -132,12 +191,20 @@
 			projectRoot = "";
 			targets = (
 				0FC70127227DEAF200893B4F /* SlowCommon */,
+				0FF3B88F229826FB006D9098 /* SlowCommonTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
 		0FC70126227DEAF200893B4F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0FF3B88E229826FB006D9098 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -158,7 +225,24 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		0FF3B88C229826FB006D9098 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0FF3B89C22983168006D9098 /* AssociatedObjectsTests.swift in Sources */,
+				0FF3B893229826FB006D9098 /* EventTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		0FF3B897229826FB006D9098 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0FC70127227DEAF200893B4F /* SlowCommon */;
+			targetProxy = 0FF3B896229826FB006D9098 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		0FC7012E227DEAF200893B4F /* Debug */ = {
@@ -296,7 +380,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = SlowCommon/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -324,7 +408,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = SlowCommon/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -333,6 +417,42 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.alexander.volokhin.SlowCommon;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		0FF3B899229826FB006D9098 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 3E2BV6MQLC;
+				INFOPLIST_FILE = SlowCommonTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.alexander.volokhin.SlowCommonTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		0FF3B89A229826FB006D9098 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 3E2BV6MQLC;
+				INFOPLIST_FILE = SlowCommonTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.alexander.volokhin.SlowCommonTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -355,6 +475,15 @@
 			buildConfigurations = (
 				0FC70131227DEAF200893B4F /* Debug */,
 				0FC70132227DEAF200893B4F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0FF3B898229826FB006D9098 /* Build configuration list for PBXNativeTarget "SlowCommonTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0FF3B899229826FB006D9098 /* Debug */,
+				0FF3B89A229826FB006D9098 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

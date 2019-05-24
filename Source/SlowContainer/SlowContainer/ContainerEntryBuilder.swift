@@ -26,8 +26,8 @@ public class ContainerEntryBuilder<T> {
 		if self.name != name {
 			if let oldName = self.name {
 				Logger.warning(Messages.redundantNameDeclaration(oldName: oldName,
-				                                                 newName: name,
-				                                                 instance: T.self))
+																 newName: name,
+																 instance: T.self))
 			}
 			self.name = name
 			let oldKeys = self.associatedKeys
@@ -45,8 +45,8 @@ public class ContainerEntryBuilder<T> {
 	public func perRequest() -> Self {
 		if let scope = self.associatedEntry.instanceScope {
 			Logger.warning(Messages.redundantScopeDeclaration(oldScope: scope,
-			                                                  newScope: .instancePerRequest,
-			                                                  instance: T.self))
+															  newScope: .instancePerRequest,
+															  instance: T.self))
 		}
 		self.associatedEntry.instanceScope = .instancePerRequest
 		return self
@@ -56,8 +56,8 @@ public class ContainerEntryBuilder<T> {
 	public func singleInstance() -> Self {
 		if let scope = self.associatedEntry.instanceScope {
 			Logger.warning(Messages.redundantScopeDeclaration(oldScope: scope,
-			                                                  newScope: .singleInstance,
-			                                                  instance: T.self))
+															  newScope: .singleInstance,
+															  instance: T.self))
 		}
 		self.associatedEntry.instanceScope = .singleInstance
 		return self
@@ -79,7 +79,7 @@ public class ContainerEntryBuilder<T> {
 	private func riseFactoryWarningIfNeeded() {
 		if let f = self.associatedEntry.instanceFactory {
 			Logger.warning(Messages.redundantFactoryDeclaration(factory: type(of: f),
-			                                                    instance: T.self))
+																instance: T.self))
 		}
 	}
 
@@ -119,257 +119,257 @@ public class ContainerEntryBuilder<T> {
 		return self
 	}
 
-//	@discardableResult
-//	public func withInit1<P>(_ initializer: @escaping (P) -> T) -> Self {
-//		self.riseFactoryWarningIfNeeded()
-//		self.associatedEntry.instanceFactory = {
-//			resolver in
-//			initializer(resolver.resolve(P.self)!)
-//		}
-//		return self
-//	}
-
 	@discardableResult
-	public func withInit<P1, P2>(_ initializer: @escaping (P1, P2) -> T) -> Self {
+	public func withInit<P>(_ initializer: @escaping (P) -> T) -> Self {
 		self.riseFactoryWarningIfNeeded()
 		self.associatedEntry.instanceFactory = {
 			resolver in
-			initializer(resolver.resolve(P1.self)!,
-			            resolver.resolve(P2.self)!)
+			initializer(resolver.resolve(P.self)!)
 		}
 		return self
 	}
 
 	@discardableResult
-	public func withInit<P1, P2, P3>(_ initializer: @escaping (P1, P2, P3) -> T) -> Self {
+	public func withInit<P1, P2>(_ initializer: @escaping ((P1, P2)) -> T) -> Self {
 		self.riseFactoryWarningIfNeeded()
 		self.associatedEntry.instanceFactory = {
 			resolver in
-			initializer(resolver.resolve(P1.self)!,
-			            resolver.resolve(P2.self)!,
-			            resolver.resolve(P3.self)!)
+			initializer((resolver.resolve(P1.self)!,
+						 resolver.resolve(P2.self)!))
 		}
 		return self
 	}
 
 	@discardableResult
-	public func withInit<P1, P2, P3, P4>(_ initializer: @escaping (P1, P2, P3, P4) -> T) -> Self {
+	public func withInit<P1, P2, P3>(_ initializer: @escaping ((P1, P2, P3)) -> T) -> Self {
 		self.riseFactoryWarningIfNeeded()
 		self.associatedEntry.instanceFactory = {
 			resolver in
-			initializer(resolver.resolve(P1.self)!,
-			            resolver.resolve(P2.self)!,
-			            resolver.resolve(P3.self)!,
-			            resolver.resolve(P4.self)!)
+			initializer((resolver.resolve(P1.self)!,
+						 resolver.resolve(P2.self)!,
+						 resolver.resolve(P3.self)!))
 		}
 		return self
 	}
 
 	@discardableResult
-	public func withInit<P1, P2, P3, P4, P5>(_ initializer: @escaping (P1, P2, P3, P4, P5) -> T) -> Self {
+	public func withInit<P1, P2, P3, P4>(_ initializer: @escaping ((P1, P2, P3, P4)) -> T) -> Self {
 		self.riseFactoryWarningIfNeeded()
 		self.associatedEntry.instanceFactory = {
 			resolver in
-			initializer(resolver.resolve(P1.self)!,
-			            resolver.resolve(P2.self)!,
-			            resolver.resolve(P3.self)!,
-			            resolver.resolve(P4.self)!,
-			            resolver.resolve(P5.self)!)
+			initializer((resolver.resolve(P1.self)!,
+						 resolver.resolve(P2.self)!,
+						 resolver.resolve(P3.self)!,
+						 resolver.resolve(P4.self)!))
 		}
 		return self
 	}
 
 	@discardableResult
-	public func withInit<P1, P2, P3, P4, P5, P6>(_ initializer: @escaping (P1, P2, P3, P4, P5, P6) -> T) -> Self {
+	public func withInit<P1, P2, P3, P4, P5>(_ initializer: @escaping ((P1, P2, P3, P4, P5)) -> T) -> Self {
 		self.riseFactoryWarningIfNeeded()
 		self.associatedEntry.instanceFactory = {
 			resolver in
-			initializer(resolver.resolve(P1.self)!,
-			            resolver.resolve(P2.self)!,
-			            resolver.resolve(P3.self)!,
-			            resolver.resolve(P4.self)!,
-			            resolver.resolve(P5.self)!,
-			            resolver.resolve(P6.self)!)
+			initializer((resolver.resolve(P1.self)!,
+						 resolver.resolve(P2.self)!,
+						 resolver.resolve(P3.self)!,
+						 resolver.resolve(P4.self)!,
+						 resolver.resolve(P5.self)!))
 		}
 		return self
 	}
 
 	@discardableResult
-	public func withInit<P1, P2, P3, P4, P5, P6, P7>(_ initializer: @escaping (P1, P2, P3, P4, P5, P6, P7) -> T) -> Self {
+	public func withInit<P1, P2, P3, P4, P5, P6>(_ initializer: @escaping ((P1, P2, P3, P4, P5, P6)) -> T) -> Self {
 		self.riseFactoryWarningIfNeeded()
 		self.associatedEntry.instanceFactory = {
 			resolver in
-			initializer(resolver.resolve(P1.self)!,
-			            resolver.resolve(P2.self)!,
-			            resolver.resolve(P3.self)!,
-			            resolver.resolve(P4.self)!,
-			            resolver.resolve(P5.self)!,
-			            resolver.resolve(P6.self)!,
-			            resolver.resolve(P7.self)!)
+			initializer((resolver.resolve(P1.self)!,
+						 resolver.resolve(P2.self)!,
+						 resolver.resolve(P3.self)!,
+						 resolver.resolve(P4.self)!,
+						 resolver.resolve(P5.self)!,
+						 resolver.resolve(P6.self)!))
 		}
 		return self
 	}
 
 	@discardableResult
-	public func withInit<P1, P2, P3, P4, P5, P6, P7, P8>(_ initializer: @escaping (P1, P2, P3, P4, P5, P6, P7, P8) -> T) -> Self {
+	public func withInit<P1, P2, P3, P4, P5, P6, P7>(_ initializer: @escaping ((P1, P2, P3, P4, P5, P6, P7)) -> T) -> Self {
 		self.riseFactoryWarningIfNeeded()
 		self.associatedEntry.instanceFactory = {
 			resolver in
-			initializer(resolver.resolve(P1.self)!,
-			            resolver.resolve(P2.self)!,
-			            resolver.resolve(P3.self)!,
-			            resolver.resolve(P4.self)!,
-			            resolver.resolve(P5.self)!,
-			            resolver.resolve(P6.self)!,
-			            resolver.resolve(P7.self)!,
-			            resolver.resolve(P8.self)!)
+			initializer((resolver.resolve(P1.self)!,
+						 resolver.resolve(P2.self)!,
+						 resolver.resolve(P3.self)!,
+						 resolver.resolve(P4.self)!,
+						 resolver.resolve(P5.self)!,
+						 resolver.resolve(P6.self)!,
+						 resolver.resolve(P7.self)!))
 		}
 		return self
 	}
 
 	@discardableResult
-	public func withInit<P1, P2, P3, P4, P5, P6, P7, P8, P9>(_ initializer: @escaping (P1, P2, P3, P4, P5, P6, P7, P8, P9) -> T) -> Self {
+	public func withInit<P1, P2, P3, P4, P5, P6, P7, P8>(_ initializer: @escaping ((P1, P2, P3, P4, P5, P6, P7, P8)) -> T) -> Self {
 		self.riseFactoryWarningIfNeeded()
 		self.associatedEntry.instanceFactory = {
 			resolver in
-			initializer(resolver.resolve(P1.self)!,
-			            resolver.resolve(P2.self)!,
-			            resolver.resolve(P3.self)!,
-			            resolver.resolve(P4.self)!,
-			            resolver.resolve(P5.self)!,
-			            resolver.resolve(P6.self)!,
-			            resolver.resolve(P7.self)!,
-			            resolver.resolve(P8.self)!,
-			            resolver.resolve(P9.self)!)
+			initializer((resolver.resolve(P1.self)!,
+						 resolver.resolve(P2.self)!,
+						 resolver.resolve(P3.self)!,
+						 resolver.resolve(P4.self)!,
+						 resolver.resolve(P5.self)!,
+						 resolver.resolve(P6.self)!,
+						 resolver.resolve(P7.self)!,
+						 resolver.resolve(P8.self)!))
 		}
 		return self
 	}
 
 	@discardableResult
-	public func withInit<P1, P2, P3, P4, P5, P6, P7, P8, P9, P10>(_ initializer: @escaping (P1, P2, P3, P4, P5, P6, P7, P8, P9, P10) -> T) -> Self {
+	public func withInit<P1, P2, P3, P4, P5, P6, P7, P8, P9>(_ initializer: @escaping ((P1, P2, P3, P4, P5, P6, P7, P8, P9)) -> T) -> Self {
 		self.riseFactoryWarningIfNeeded()
 		self.associatedEntry.instanceFactory = {
 			resolver in
-			initializer(resolver.resolve(P1.self)!,
-			            resolver.resolve(P2.self)!,
-			            resolver.resolve(P3.self)!,
-			            resolver.resolve(P4.self)!,
-			            resolver.resolve(P5.self)!,
-			            resolver.resolve(P6.self)!,
-			            resolver.resolve(P7.self)!,
-			            resolver.resolve(P8.self)!,
-			            resolver.resolve(P9.self)!,
-			            resolver.resolve(P10.self)!)
+			initializer((resolver.resolve(P1.self)!,
+						 resolver.resolve(P2.self)!,
+						 resolver.resolve(P3.self)!,
+						 resolver.resolve(P4.self)!,
+						 resolver.resolve(P5.self)!,
+						 resolver.resolve(P6.self)!,
+						 resolver.resolve(P7.self)!,
+						 resolver.resolve(P8.self)!,
+						 resolver.resolve(P9.self)!))
 		}
 		return self
 	}
 
 	@discardableResult
-	public func withInit<P1, P2, P3, P4, P5, P6, P7, P8, P9, P10, P11>(_ initializer: @escaping (P1, P2, P3, P4, P5, P6, P7, P8, P9, P10, P11) -> T) -> Self {
+	public func withInit<P1, P2, P3, P4, P5, P6, P7, P8, P9, P10>(_ initializer: @escaping ((P1, P2, P3, P4, P5, P6, P7, P8, P9, P10)) -> T) -> Self {
 		self.riseFactoryWarningIfNeeded()
 		self.associatedEntry.instanceFactory = {
 			resolver in
-			initializer(resolver.resolve(P1.self)!,
-			            resolver.resolve(P2.self)!,
-			            resolver.resolve(P3.self)!,
-			            resolver.resolve(P4.self)!,
-			            resolver.resolve(P5.self)!,
-			            resolver.resolve(P6.self)!,
-			            resolver.resolve(P7.self)!,
-			            resolver.resolve(P8.self)!,
-			            resolver.resolve(P9.self)!,
-			            resolver.resolve(P10.self)!,
-			            resolver.resolve(P11.self)!)
+			initializer((resolver.resolve(P1.self)!,
+						 resolver.resolve(P2.self)!,
+						 resolver.resolve(P3.self)!,
+						 resolver.resolve(P4.self)!,
+						 resolver.resolve(P5.self)!,
+						 resolver.resolve(P6.self)!,
+						 resolver.resolve(P7.self)!,
+						 resolver.resolve(P8.self)!,
+						 resolver.resolve(P9.self)!,
+						 resolver.resolve(P10.self)!))
 		}
 		return self
 	}
 
 	@discardableResult
-	public func withInit<P1, P2, P3, P4, P5, P6, P7, P8, P9, P10, P11, P12>(_ initializer: @escaping (P1, P2, P3, P4, P5, P6, P7, P8, P9, P10, P11, P12) -> T) -> Self {
+	public func withInit<P1, P2, P3, P4, P5, P6, P7, P8, P9, P10, P11>(_ initializer: @escaping ((P1, P2, P3, P4, P5, P6, P7, P8, P9, P10, P11)) -> T) -> Self {
 		self.riseFactoryWarningIfNeeded()
 		self.associatedEntry.instanceFactory = {
 			resolver in
-			initializer(resolver.resolve(P1.self)!,
-			            resolver.resolve(P2.self)!,
-			            resolver.resolve(P3.self)!,
-			            resolver.resolve(P4.self)!,
-			            resolver.resolve(P5.self)!,
-			            resolver.resolve(P6.self)!,
-			            resolver.resolve(P7.self)!,
-			            resolver.resolve(P8.self)!,
-			            resolver.resolve(P9.self)!,
-			            resolver.resolve(P10.self)!,
-			            resolver.resolve(P11.self)!,
-			            resolver.resolve(P12.self)!)
+			initializer((resolver.resolve(P1.self)!,
+						 resolver.resolve(P2.self)!,
+						 resolver.resolve(P3.self)!,
+						 resolver.resolve(P4.self)!,
+						 resolver.resolve(P5.self)!,
+						 resolver.resolve(P6.self)!,
+						 resolver.resolve(P7.self)!,
+						 resolver.resolve(P8.self)!,
+						 resolver.resolve(P9.self)!,
+						 resolver.resolve(P10.self)!,
+						 resolver.resolve(P11.self)!))
 		}
 		return self
 	}
 
 	@discardableResult
-	public func withInit<P1, P2, P3, P4, P5, P6, P7, P8, P9, P10, P11, P12, P13>(_ initializer: @escaping (P1, P2, P3, P4, P5, P6, P7, P8, P9, P10, P11, P12, P13) -> T) -> Self {
+	public func withInit<P1, P2, P3, P4, P5, P6, P7, P8, P9, P10, P11, P12>(_ initializer: @escaping ((P1, P2, P3, P4, P5, P6, P7, P8, P9, P10, P11, P12)) -> T) -> Self {
 		self.riseFactoryWarningIfNeeded()
 		self.associatedEntry.instanceFactory = {
 			resolver in
-			initializer(resolver.resolve(P1.self)!,
-			            resolver.resolve(P2.self)!,
-			            resolver.resolve(P3.self)!,
-			            resolver.resolve(P4.self)!,
-			            resolver.resolve(P5.self)!,
-			            resolver.resolve(P6.self)!,
-			            resolver.resolve(P7.self)!,
-			            resolver.resolve(P8.self)!,
-			            resolver.resolve(P9.self)!,
-			            resolver.resolve(P10.self)!,
-			            resolver.resolve(P11.self)!,
-			            resolver.resolve(P12.self)!,
-			            resolver.resolve(P13.self)!)
+			initializer((resolver.resolve(P1.self)!,
+						 resolver.resolve(P2.self)!,
+						 resolver.resolve(P3.self)!,
+						 resolver.resolve(P4.self)!,
+						 resolver.resolve(P5.self)!,
+						 resolver.resolve(P6.self)!,
+						 resolver.resolve(P7.self)!,
+						 resolver.resolve(P8.self)!,
+						 resolver.resolve(P9.self)!,
+						 resolver.resolve(P10.self)!,
+						 resolver.resolve(P11.self)!,
+						 resolver.resolve(P12.self)!))
 		}
 		return self
 	}
 
 	@discardableResult
-	public func withInit<P1, P2, P3, P4, P5, P6, P7, P8, P9, P10, P11, P12, P13, P14>(_ initializer: @escaping (P1, P2, P3, P4, P5, P6, P7, P8, P9, P10, P11, P12, P13, P14) -> T) -> Self {
+	public func withInit<P1, P2, P3, P4, P5, P6, P7, P8, P9, P10, P11, P12, P13>(_ initializer: @escaping ((P1, P2, P3, P4, P5, P6, P7, P8, P9, P10, P11, P12, P13)) -> T) -> Self {
 		self.riseFactoryWarningIfNeeded()
 		self.associatedEntry.instanceFactory = {
 			resolver in
-			initializer(resolver.resolve(P1.self)!,
-			            resolver.resolve(P2.self)!,
-			            resolver.resolve(P3.self)!,
-			            resolver.resolve(P4.self)!,
-			            resolver.resolve(P5.self)!,
-			            resolver.resolve(P6.self)!,
-			            resolver.resolve(P7.self)!,
-			            resolver.resolve(P8.self)!,
-			            resolver.resolve(P9.self)!,
-			            resolver.resolve(P10.self)!,
-			            resolver.resolve(P11.self)!,
-			            resolver.resolve(P12.self)!,
-			            resolver.resolve(P13.self)!,
-			            resolver.resolve(P14.self)!)
+			initializer((resolver.resolve(P1.self)!,
+						 resolver.resolve(P2.self)!,
+						 resolver.resolve(P3.self)!,
+						 resolver.resolve(P4.self)!,
+						 resolver.resolve(P5.self)!,
+						 resolver.resolve(P6.self)!,
+						 resolver.resolve(P7.self)!,
+						 resolver.resolve(P8.self)!,
+						 resolver.resolve(P9.self)!,
+						 resolver.resolve(P10.self)!,
+						 resolver.resolve(P11.self)!,
+						 resolver.resolve(P12.self)!,
+						 resolver.resolve(P13.self)!))
 		}
 		return self
 	}
 
 	@discardableResult
-	public func withInit<P1, P2, P3, P4, P5, P6, P7, P8, P9, P10, P11, P12, P13, P14, P15>(_ initializer: @escaping (P1, P2, P3, P4, P5, P6, P7, P8, P9, P10, P11, P12, P13, P14, P15) -> T) -> Self {
+	public func withInit<P1, P2, P3, P4, P5, P6, P7, P8, P9, P10, P11, P12, P13, P14>(_ initializer: @escaping ((P1, P2, P3, P4, P5, P6, P7, P8, P9, P10, P11, P12, P13, P14)) -> T) -> Self {
 		self.riseFactoryWarningIfNeeded()
 		self.associatedEntry.instanceFactory = {
 			resolver in
-			initializer(resolver.resolve(P1.self)!,
-			            resolver.resolve(P2.self)!,
-			            resolver.resolve(P3.self)!,
-			            resolver.resolve(P4.self)!,
-			            resolver.resolve(P5.self)!,
-			            resolver.resolve(P6.self)!,
-			            resolver.resolve(P7.self)!,
-			            resolver.resolve(P8.self)!,
-			            resolver.resolve(P9.self)!,
-			            resolver.resolve(P10.self)!,
-			            resolver.resolve(P11.self)!,
-			            resolver.resolve(P12.self)!,
-			            resolver.resolve(P13.self)!,
-			            resolver.resolve(P14.self)!,
-			            resolver.resolve(P15.self)!)
+			initializer((resolver.resolve(P1.self)!,
+						 resolver.resolve(P2.self)!,
+						 resolver.resolve(P3.self)!,
+						 resolver.resolve(P4.self)!,
+						 resolver.resolve(P5.self)!,
+						 resolver.resolve(P6.self)!,
+						 resolver.resolve(P7.self)!,
+						 resolver.resolve(P8.self)!,
+						 resolver.resolve(P9.self)!,
+						 resolver.resolve(P10.self)!,
+						 resolver.resolve(P11.self)!,
+						 resolver.resolve(P12.self)!,
+						 resolver.resolve(P13.self)!,
+						 resolver.resolve(P14.self)!))
+		}
+		return self
+	}
+
+	@discardableResult
+	public func withInit<P1, P2, P3, P4, P5, P6, P7, P8, P9, P10, P11, P12, P13, P14, P15>(_ initializer: @escaping ((P1, P2, P3, P4, P5, P6, P7, P8, P9, P10, P11, P12, P13, P14, P15)) -> T) -> Self {
+		self.riseFactoryWarningIfNeeded()
+		self.associatedEntry.instanceFactory = {
+			resolver in
+			initializer((resolver.resolve(P1.self)!,
+						 resolver.resolve(P2.self)!,
+						 resolver.resolve(P3.self)!,
+						 resolver.resolve(P4.self)!,
+						 resolver.resolve(P5.self)!,
+						 resolver.resolve(P6.self)!,
+						 resolver.resolve(P7.self)!,
+						 resolver.resolve(P8.self)!,
+						 resolver.resolve(P9.self)!,
+						 resolver.resolve(P10.self)!,
+						 resolver.resolve(P11.self)!,
+						 resolver.resolve(P12.self)!,
+						 resolver.resolve(P13.self)!,
+						 resolver.resolve(P14.self)!,
+						 resolver.resolve(P15.self)!))
 		}
 		return self
 	}

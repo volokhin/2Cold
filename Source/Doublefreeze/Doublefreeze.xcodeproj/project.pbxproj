@@ -20,8 +20,6 @@
 		0F139F202278A8F900B763F7 /* FreezersListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F139F1E2278A8F900B763F7 /* FreezersListVC.swift */; };
 		0F139F242278A90000B763F7 /* HomeVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F139F222278A90000B763F7 /* HomeVM.swift */; };
 		0F139F252278A90000B763F7 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F139F232278A90000B763F7 /* HomeVC.swift */; };
-		0F139F942278AB0600B763F7 /* SlowControls.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F139F882278AAE900B763F7 /* SlowControls.framework */; };
-		0F139F952278AB0600B763F7 /* SlowControls.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0F139F882278AAE900B763F7 /* SlowControls.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		0F13A4622278AD7C00B763F7 /* UIColor.Palette.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F13A4612278AD7C00B763F7 /* UIColor.Palette.swift */; };
 		0F55B163227951570057319E /* UIFont.Palette.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F55B162227951570057319E /* UIFont.Palette.swift */; };
 		0F55BAE8227957190057319E /* SuisseIntl-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 0F55B161227950690057319E /* SuisseIntl-Bold.otf */; };
@@ -41,107 +39,17 @@
 		0FC70613227F037200893B4F /* SelectedFreezerChangedNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FC70612227F037200893B4F /* SelectedFreezerChangedNotification.swift */; };
 		0FC70615227F07EA00893B4F /* ShowListNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FC70614227F07EA00893B4F /* ShowListNotification.swift */; };
 		0FC70617227F07FE00893B4F /* ShowCarouselNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FC70616227F07FE00893B4F /* ShowCarouselNotification.swift */; };
-		0FC70AE8227FD78C00893B4F /* SlowCommon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0FC70138227DEB0A00893B4F /* SlowCommon.framework */; };
-		0FC70AE9227FD78C00893B4F /* SlowCommon.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0FC70138227DEB0A00893B4F /* SlowCommon.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		0FC7FB19227CA99C00893B4F /* FreezerListItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FC7FB18227CA99C00893B4F /* FreezerListItemCell.swift */; };
 		0FC7FB1E227CAA0300893B4F /* FreezerListItemVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FC7FB1D227CAA0300893B4F /* FreezerListItemVM.swift */; };
 		0FC7FB20227CAA4C00893B4F /* FreezerListItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0FC7FB1F227CAA4C00893B4F /* FreezerListItemCell.xib */; };
-		0FC7FBB4227D6A0E00893B4F /* SlowContainer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0FC7FBB1227D6A0200893B4F /* SlowContainer.framework */; };
-		0FC7FBB5227D6A0E00893B4F /* SlowContainer.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0FC7FBB1227D6A0200893B4F /* SlowContainer.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		0FC7FBE9227DC7E600893B4F /* SlowHelpers.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F139F8E2278AAF100B763F7 /* SlowHelpers.framework */; };
-		0FC7FBEA227DC7E600893B4F /* SlowHelpers.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0F139F8E2278AAF100B763F7 /* SlowHelpers.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		0FC7FC47227DC8CD00893B4F /* SlowMVVM.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0FC7FC44227DC8C000893B4F /* SlowMVVM.framework */; };
-		0FC7FC48227DC8CD00893B4F /* SlowMVVM.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0FC7FC44227DC8C000893B4F /* SlowMVVM.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		0FC7FC52227DCA8100893B4F /* FreezerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FC7FC51227DCA8100893B4F /* FreezerModel.swift */; };
 		0FC7FC54227DCB4200893B4F /* IFreezersService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FC7FC53227DCB4200893B4F /* IFreezersService.swift */; };
+		0FF3B8C3229845DE006D9098 /* SlowCommon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0FF3B8C2229845DE006D9098 /* SlowCommon.framework */; };
+		0FF3B8C5229845DE006D9098 /* SlowContainer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0FF3B8C4229845DE006D9098 /* SlowContainer.framework */; };
+		0FF3B8C7229845DE006D9098 /* SlowControls.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0FF3B8C6229845DE006D9098 /* SlowControls.framework */; };
+		0FF3B8C9229845DE006D9098 /* SlowHelpers.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0FF3B8C8229845DE006D9098 /* SlowHelpers.framework */; };
+		0FF3B8CB229845DE006D9098 /* SlowMVVM.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0FF3B8CA229845DE006D9098 /* SlowMVVM.framework */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		0F139F872278AAE900B763F7 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 0F139F832278AAE900B763F7 /* SlowControls.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 0FC3613522740F00005CDD55;
-			remoteInfo = SlowControls;
-		};
-		0F139F8D2278AAF100B763F7 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 0F139F892278AAF000B763F7 /* SlowHelpers.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 0F139F6F2278AA8000B763F7;
-			remoteInfo = SlowHelpers;
-		};
-		0F139F962278AB0600B763F7 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 0F139F832278AAE900B763F7 /* SlowControls.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = 0FC3613422740F00005CDD55;
-			remoteInfo = SlowControls;
-		};
-		0FC70137227DEB0A00893B4F /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 0FC70133227DEB0900893B4F /* SlowCommon.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 0FC70128227DEAF200893B4F;
-			remoteInfo = SlowCommon;
-		};
-		0FC70AEA227FD78C00893B4F /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 0FC70133227DEB0900893B4F /* SlowCommon.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = 0FC70127227DEAF200893B4F;
-			remoteInfo = SlowCommon;
-		};
-		0FC7FBB0227D6A0200893B4F /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 0FC7FBAB227D6A0200893B4F /* SlowContainer.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 0FC7FB36227D54B000893B4F;
-			remoteInfo = SlowContainer;
-		};
-		0FC7FBB2227D6A0200893B4F /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 0FC7FBAB227D6A0200893B4F /* SlowContainer.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 0FC7FB3F227D54B100893B4F;
-			remoteInfo = SlowContainerTests;
-		};
-		0FC7FBB6227D6A0E00893B4F /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 0FC7FBAB227D6A0200893B4F /* SlowContainer.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = 0FC7FB35227D54B000893B4F;
-			remoteInfo = SlowContainer;
-		};
-		0FC7FBEB227DC7E600893B4F /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 0F139F892278AAF000B763F7 /* SlowHelpers.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = 0F139F6E2278AA8000B763F7;
-			remoteInfo = SlowHelpers;
-		};
-		0FC7FC43227DC8C000893B4F /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 0FC7FC3E227DC8C000893B4F /* SlowMVVM.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 0FC7FBF7227DC83B00893B4F;
-			remoteInfo = SlowMVVM;
-		};
-		0FC7FC45227DC8C000893B4F /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 0FC7FC3E227DC8C000893B4F /* SlowMVVM.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 0FC7FC00227DC83B00893B4F;
-			remoteInfo = SlowMVVMTests;
-		};
-		0FC7FC49227DC8CD00893B4F /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 0FC7FC3E227DC8C000893B4F /* SlowMVVM.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = 0FC7FBF6227DC83B00893B4F;
-			remoteInfo = SlowMVVM;
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		0F139F932278AB0000B763F7 /* Embed Frameworks */ = {
@@ -150,11 +58,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				0F139F952278AB0600B763F7 /* SlowControls.framework in Embed Frameworks */,
-				0FC7FC48227DC8CD00893B4F /* SlowMVVM.framework in Embed Frameworks */,
-				0FC7FBB5227D6A0E00893B4F /* SlowContainer.framework in Embed Frameworks */,
-				0FC7FBEA227DC7E600893B4F /* SlowHelpers.framework in Embed Frameworks */,
-				0FC70AE9227FD78C00893B4F /* SlowCommon.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -177,8 +80,6 @@
 		0F139F1E2278A8F900B763F7 /* FreezersListVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FreezersListVC.swift; sourceTree = "<group>"; };
 		0F139F222278A90000B763F7 /* HomeVM.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeVM.swift; sourceTree = "<group>"; };
 		0F139F232278A90000B763F7 /* HomeVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
-		0F139F832278AAE900B763F7 /* SlowControls.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SlowControls.xcodeproj; path = ../SlowControls/SlowControls.xcodeproj; sourceTree = "<group>"; };
-		0F139F892278AAF000B763F7 /* SlowHelpers.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SlowHelpers.xcodeproj; path = ../SlowHelpers/SlowHelpers.xcodeproj; sourceTree = "<group>"; };
 		0F13A4612278AD7C00B763F7 /* UIColor.Palette.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.Palette.swift; sourceTree = "<group>"; };
 		0F55B161227950690057319E /* SuisseIntl-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SuisseIntl-Bold.otf"; sourceTree = "<group>"; };
 		0F55B162227951570057319E /* UIFont.Palette.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIFont.Palette.swift; sourceTree = "<group>"; };
@@ -195,18 +96,19 @@
 		0F983694228F0FFE00057114 /* IUserSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IUserSettings.swift; sourceTree = "<group>"; };
 		0F983698228F100B00057114 /* UserSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSettings.swift; sourceTree = "<group>"; };
 		0FC70119227DCE2D00893B4F /* FreezersService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FreezersService.swift; sourceTree = "<group>"; };
-		0FC70133227DEB0900893B4F /* SlowCommon.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SlowCommon.xcodeproj; path = ../SlowCommon/SlowCommon.xcodeproj; sourceTree = "<group>"; };
 		0FC70612227F037200893B4F /* SelectedFreezerChangedNotification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedFreezerChangedNotification.swift; sourceTree = "<group>"; };
 		0FC70614227F07EA00893B4F /* ShowListNotification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowListNotification.swift; sourceTree = "<group>"; };
 		0FC70616227F07FE00893B4F /* ShowCarouselNotification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowCarouselNotification.swift; sourceTree = "<group>"; };
 		0FC7FB18227CA99C00893B4F /* FreezerListItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FreezerListItemCell.swift; sourceTree = "<group>"; };
 		0FC7FB1D227CAA0300893B4F /* FreezerListItemVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FreezerListItemVM.swift; sourceTree = "<group>"; };
 		0FC7FB1F227CAA4C00893B4F /* FreezerListItemCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FreezerListItemCell.xib; sourceTree = "<group>"; };
-		0FC7FBAB227D6A0200893B4F /* SlowContainer.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SlowContainer.xcodeproj; path = ../SlowContainer/SlowContainer.xcodeproj; sourceTree = "<group>"; };
-		0FC7FBBF227D6EA700893B4F /* SlowMVVM.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SlowMVVM.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		0FC7FC3E227DC8C000893B4F /* SlowMVVM.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SlowMVVM.xcodeproj; path = ../SlowMVVM/SlowMVVM.xcodeproj; sourceTree = "<group>"; };
 		0FC7FC51227DCA8100893B4F /* FreezerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FreezerModel.swift; sourceTree = "<group>"; };
 		0FC7FC53227DCB4200893B4F /* IFreezersService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IFreezersService.swift; sourceTree = "<group>"; };
+		0FF3B8C2229845DE006D9098 /* SlowCommon.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SlowCommon.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0FF3B8C4229845DE006D9098 /* SlowContainer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SlowContainer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0FF3B8C6229845DE006D9098 /* SlowControls.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SlowControls.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0FF3B8C8229845DE006D9098 /* SlowHelpers.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SlowHelpers.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0FF3B8CA229845DE006D9098 /* SlowMVVM.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SlowMVVM.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -214,11 +116,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0F139F942278AB0600B763F7 /* SlowControls.framework in Frameworks */,
-				0FC7FC47227DC8CD00893B4F /* SlowMVVM.framework in Frameworks */,
-				0FC7FBB4227D6A0E00893B4F /* SlowContainer.framework in Frameworks */,
-				0FC7FBE9227DC7E600893B4F /* SlowHelpers.framework in Frameworks */,
-				0FC70AE8227FD78C00893B4F /* SlowCommon.framework in Frameworks */,
+				0FF3B8C3229845DE006D9098 /* SlowCommon.framework in Frameworks */,
+				0FF3B8C5229845DE006D9098 /* SlowContainer.framework in Frameworks */,
+				0FF3B8C7229845DE006D9098 /* SlowControls.framework in Frameworks */,
+				0FF3B8C9229845DE006D9098 /* SlowHelpers.framework in Frameworks */,
+				0FF3B8CB229845DE006D9098 /* SlowMVVM.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -228,11 +130,6 @@
 		0F139EF02278A86900B763F7 = {
 			isa = PBXGroup;
 			children = (
-				0FC70133227DEB0900893B4F /* SlowCommon.xcodeproj */,
-				0FC7FC3E227DC8C000893B4F /* SlowMVVM.xcodeproj */,
-				0FC7FBAB227D6A0200893B4F /* SlowContainer.xcodeproj */,
-				0F139F892278AAF000B763F7 /* SlowHelpers.xcodeproj */,
-				0F139F832278AAE900B763F7 /* SlowControls.xcodeproj */,
 				0F139EFB2278A86900B763F7 /* Doublefreeze */,
 				0F139EFA2278A86900B763F7 /* Products */,
 				0FC7FBBE227D6EA700893B4F /* Frameworks */,
@@ -310,22 +207,6 @@
 			path = Home;
 			sourceTree = "<group>";
 		};
-		0F139F842278AAE900B763F7 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				0F139F882278AAE900B763F7 /* SlowControls.framework */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		0F139F8A2278AAF000B763F7 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				0F139F8E2278AAF100B763F7 /* SlowHelpers.framework */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
 		0F13A4602278AC8A00B763F7 /* Common */ = {
 			isa = PBXGroup;
 			children = (
@@ -344,14 +225,6 @@
 			path = Fonts;
 			sourceTree = "<group>";
 		};
-		0FC70134227DEB0900893B4F /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				0FC70138227DEB0A00893B4F /* SlowCommon.framework */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
 		0FC70611227F035200893B4F /* Notifications */ = {
 			isa = PBXGroup;
 			children = (
@@ -364,30 +237,16 @@
 			path = Notifications;
 			sourceTree = "<group>";
 		};
-		0FC7FBAC227D6A0200893B4F /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				0FC7FBB1227D6A0200893B4F /* SlowContainer.framework */,
-				0FC7FBB3227D6A0200893B4F /* SlowContainerTests.xctest */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
 		0FC7FBBE227D6EA700893B4F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				0FC7FBBF227D6EA700893B4F /* SlowMVVM.framework */,
+				0FF3B8C2229845DE006D9098 /* SlowCommon.framework */,
+				0FF3B8C4229845DE006D9098 /* SlowContainer.framework */,
+				0FF3B8C6229845DE006D9098 /* SlowControls.framework */,
+				0FF3B8C8229845DE006D9098 /* SlowHelpers.framework */,
+				0FF3B8CA229845DE006D9098 /* SlowMVVM.framework */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		0FC7FC3F227DC8C000893B4F /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				0FC7FC44227DC8C000893B4F /* SlowMVVM.framework */,
-				0FC7FC46227DC8C000893B4F /* SlowMVVMTests.xctest */,
-			);
-			name = Products;
 			sourceTree = "<group>";
 		};
 		0FC7FC50227DCA7200893B4F /* Services */ = {
@@ -421,11 +280,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				0F139F972278AB0600B763F7 /* PBXTargetDependency */,
-				0FC7FBB7227D6A0E00893B4F /* PBXTargetDependency */,
-				0FC7FBEC227DC7E600893B4F /* PBXTargetDependency */,
-				0FC7FC4A227DC8CD00893B4F /* PBXTargetDependency */,
-				0FC70AEB227FD78C00893B4F /* PBXTargetDependency */,
 			);
 			name = Doublefreeze;
 			productName = Doublefreeze;
@@ -458,86 +312,12 @@
 			mainGroup = 0F139EF02278A86900B763F7;
 			productRefGroup = 0F139EFA2278A86900B763F7 /* Products */;
 			projectDirPath = "";
-			projectReferences = (
-				{
-					ProductGroup = 0FC70134227DEB0900893B4F /* Products */;
-					ProjectRef = 0FC70133227DEB0900893B4F /* SlowCommon.xcodeproj */;
-				},
-				{
-					ProductGroup = 0FC7FBAC227D6A0200893B4F /* Products */;
-					ProjectRef = 0FC7FBAB227D6A0200893B4F /* SlowContainer.xcodeproj */;
-				},
-				{
-					ProductGroup = 0F139F842278AAE900B763F7 /* Products */;
-					ProjectRef = 0F139F832278AAE900B763F7 /* SlowControls.xcodeproj */;
-				},
-				{
-					ProductGroup = 0F139F8A2278AAF000B763F7 /* Products */;
-					ProjectRef = 0F139F892278AAF000B763F7 /* SlowHelpers.xcodeproj */;
-				},
-				{
-					ProductGroup = 0FC7FC3F227DC8C000893B4F /* Products */;
-					ProjectRef = 0FC7FC3E227DC8C000893B4F /* SlowMVVM.xcodeproj */;
-				},
-			);
 			projectRoot = "";
 			targets = (
 				0F139EF82278A86900B763F7 /* Doublefreeze */,
 			);
 		};
 /* End PBXProject section */
-
-/* Begin PBXReferenceProxy section */
-		0F139F882278AAE900B763F7 /* SlowControls.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = SlowControls.framework;
-			remoteRef = 0F139F872278AAE900B763F7 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		0F139F8E2278AAF100B763F7 /* SlowHelpers.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = SlowHelpers.framework;
-			remoteRef = 0F139F8D2278AAF100B763F7 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		0FC70138227DEB0A00893B4F /* SlowCommon.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = SlowCommon.framework;
-			remoteRef = 0FC70137227DEB0A00893B4F /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		0FC7FBB1227D6A0200893B4F /* SlowContainer.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = SlowContainer.framework;
-			remoteRef = 0FC7FBB0227D6A0200893B4F /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		0FC7FBB3227D6A0200893B4F /* SlowContainerTests.xctest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = SlowContainerTests.xctest;
-			remoteRef = 0FC7FBB2227D6A0200893B4F /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		0FC7FC44227DC8C000893B4F /* SlowMVVM.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = SlowMVVM.framework;
-			remoteRef = 0FC7FC43227DC8C000893B4F /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		0FC7FC46227DC8C000893B4F /* SlowMVVMTests.xctest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = SlowMVVMTests.xctest;
-			remoteRef = 0FC7FC45227DC8C000893B4F /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		0F139EF72278A86900B763F7 /* Resources */ = {
@@ -595,34 +375,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		0F139F972278AB0600B763F7 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = SlowControls;
-			targetProxy = 0F139F962278AB0600B763F7 /* PBXContainerItemProxy */;
-		};
-		0FC70AEB227FD78C00893B4F /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = SlowCommon;
-			targetProxy = 0FC70AEA227FD78C00893B4F /* PBXContainerItemProxy */;
-		};
-		0FC7FBB7227D6A0E00893B4F /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = SlowContainer;
-			targetProxy = 0FC7FBB6227D6A0E00893B4F /* PBXContainerItemProxy */;
-		};
-		0FC7FBEC227DC7E600893B4F /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = SlowHelpers;
-			targetProxy = 0FC7FBEB227DC7E600893B4F /* PBXContainerItemProxy */;
-		};
-		0FC7FC4A227DC8CD00893B4F /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = SlowMVVM;
-			targetProxy = 0FC7FC49227DC8CD00893B4F /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		0F139F052278A86A00B763F7 /* LaunchScreen.storyboard */ = {
@@ -757,16 +509,18 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3E2BV6MQLC;
 				INFOPLIST_FILE = Doublefreeze/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.alexander.volokhin.2cold;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -777,16 +531,18 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3E2BV6MQLC;
 				INFOPLIST_FILE = Doublefreeze/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.alexander.volokhin.2cold;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};

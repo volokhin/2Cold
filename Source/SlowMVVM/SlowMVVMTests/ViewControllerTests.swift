@@ -9,8 +9,8 @@ internal class ViewControllerTests: XCTestCase {
 
 		var vc: TestViewController? = TestViewController()
 		var vm: TestViewModel? = TestViewModel()
-		let weakVc: Weak<TestViewController> = Weak(value: vc!)
-		let weakVm: Weak<TestViewModel> = Weak(value: vm!)
+		let weakVc: Weak<TestViewController> = Weak(vc!)
+		let weakVm: Weak<TestViewModel> = Weak(vm!)
 
 		vc = nil
 		vm = nil

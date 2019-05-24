@@ -10,7 +10,7 @@ private class Handler<Args> {
 	}
 
 	init(subscriber: AnyObject, action: @escaping (Args) -> Void) {
-		self.subscriber = Weak(value: subscriber)
+		self.subscriber = Weak(subscriber)
 		self.action = action
 	}
 

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workspace
+   version = "1.0">
+   <FileRef
+      location = "group:Doublefreeze/Doublefreeze.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:SlowMVVM/SlowMVVM.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:SlowHelpers/SlowHelpers.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:SlowControls/SlowControls.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:SlowContainer/SlowContainer.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:SlowCommon/SlowCommon.xcodeproj">
+   </FileRef>
+</Workspace>

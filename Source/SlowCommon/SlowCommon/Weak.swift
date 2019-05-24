@@ -8,7 +8,7 @@ public class Weak<T: AnyObject> {
 		return self.value != nil
 	}
 
-	public init(value: T) {
+	public init(_ value: T?) {
 		self.value = value
 	}
 }
