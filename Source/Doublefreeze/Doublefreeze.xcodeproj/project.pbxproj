@@ -35,6 +35,7 @@
 		0F6159A922990A2600865ECB /* SlowHelpers.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F61599F229909BD00865ECB /* SlowHelpers.framework */; };
 		0F6159AA22990A2600865ECB /* SlowHelpers.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0F61599F229909BD00865ECB /* SlowHelpers.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		0F6159AC22990A2600865ECB /* SlowMVVM.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0F6159A1229909BD00865ECB /* SlowMVVM.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		0F615F522299856F00865ECB /* LaunchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F615F512299856F00865ECB /* LaunchView.swift */; };
 		0F68216C2283D4BC008097F2 /* SnowFlakeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F68216B2283D4BC008097F2 /* SnowFlakeView.swift */; };
 		0F68263822844099008097F2 /* FloorChangedNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F68263722844099008097F2 /* FloorChangedNotification.swift */; };
 		0F682B0722886872008097F2 /* IFreezersHttpClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F682B0422886872008097F2 /* IFreezersHttpClient.swift */; };
@@ -100,6 +101,7 @@
 		0F61599D229909BD00865ECB /* SlowControls.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SlowControls.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0F61599F229909BD00865ECB /* SlowHelpers.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SlowHelpers.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0F6159A1229909BD00865ECB /* SlowMVVM.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SlowMVVM.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0F615F512299856F00865ECB /* LaunchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchView.swift; sourceTree = "<group>"; };
 		0F68216B2283D4BC008097F2 /* SnowFlakeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnowFlakeView.swift; sourceTree = "<group>"; };
 		0F68263722844099008097F2 /* FloorChangedNotification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloorChangedNotification.swift; sourceTree = "<group>"; };
 		0F682B0422886872008097F2 /* IFreezersHttpClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IFreezersHttpClient.swift; sourceTree = "<group>"; };
@@ -168,6 +170,7 @@
 				0F139EFC2278A86900B763F7 /* AppDelegate.swift */,
 				0F139F032278A86A00B763F7 /* Assets.xcassets */,
 				0F139F052278A86A00B763F7 /* LaunchScreen.storyboard */,
+				0F615F512299856F00865ECB /* LaunchView.swift */,
 				0F139F082278A86A00B763F7 /* Info.plist */,
 			);
 			path = Doublefreeze;
@@ -358,6 +361,7 @@
 				0F139F202278A8F900B763F7 /* FreezersListVC.swift in Sources */,
 				0F55BAEC2279C4C60057319E /* TogleIcon.swift in Sources */,
 				0FC70617227F07FE00893B4F /* ShowCarouselNotification.swift in Sources */,
+				0F615F522299856F00865ECB /* LaunchView.swift in Sources */,
 				0F682B0922886882008097F2 /* FreezersHttpClient.swift in Sources */,
 				0F682B0B228875AF008097F2 /* ServiceError.swift in Sources */,
 				0FC7FB19227CA99C00893B4F /* FreezerListItemCell.swift in Sources */,
@@ -518,9 +522,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Distribution";
-				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = T8VV4TJVDE;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 3E2BV6MQLC;
 				INFOPLIST_FILE = Doublefreeze/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -529,7 +533,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.doublegis.2cold;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "Wildcard Distribution Profile";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -539,9 +543,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Distribution";
-				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = T8VV4TJVDE;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 3E2BV6MQLC;
 				INFOPLIST_FILE = Doublefreeze/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -550,7 +554,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.doublegis.2cold;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "Wildcard Distribution Profile";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};

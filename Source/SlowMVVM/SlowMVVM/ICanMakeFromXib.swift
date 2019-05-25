@@ -3,6 +3,7 @@ import UIKit
 public protocol ICanMakeFromXib {
 
 	static func makeFromXib() -> Self
+	static func nib() -> UINib
 
 }
 
@@ -10,7 +11,7 @@ public extension ICanMakeFromXib where Self: UIView {
 
 	static func nib() -> UINib {
 		let bundle = Bundle.main
-		let name = "\(Self.self)"
+		let name = String(describing: Self.self)
 		return UINib(nibName: name, bundle: bundle)
 	}
 

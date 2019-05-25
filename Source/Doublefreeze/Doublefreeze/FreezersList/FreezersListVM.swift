@@ -8,8 +8,7 @@ class FreezersListVM : ViewControllerViewModelBase {
 	private let notificationService: INotificationService
 	private var itemsMap: [FreezerIdentifier: FreezerListItemVM] = [:]
 	
-	var items: [FreezerListItemVM] = []
-	var onReload: (() -> Void)?
+	var items: BindableCollection<FreezerListItemVM> = []
 	var onSelectedFreezerChanged: ((Int) -> Void)?
 
 	var selectedFloorIndex: Int = 0 {
@@ -69,16 +68,16 @@ class FreezersListVM : ViewControllerViewModelBase {
 
 	private func changeFloor() {
 		self.createItems()
-		self.onReload?()
 		self.notificationService.broadcast(FloorChangedNotification(floor: self.selectedFloor))
 	}
 
 	private func createItems() {
 		let freezers = self.freezersService.freezers()
-		self.items = freezers
+		let items = freezers
 			.filter { $0.floor == self.selectedFloor }
 			.sorted { $0.place == $1.place ? $0.name < $1.name : $0.place < $1.place }
 			.map { FreezerListItemVM(item: $0, notificationService: self.notificationService) }
+		self.items.reload(with: items)
 		self.itemsMap = Dictionary(uniqueKeysWithValues: self.items.map { ($0.uniqueId, $0) })
 	}
 

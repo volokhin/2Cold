@@ -23,7 +23,3 @@ open class TableCellBase<TViewModel: CellViewModelBase> : UITableViewCell, IHave
 		}
 	}
 }
-
-extension TableCellBase : ICanMakeFromXib {
-
-}

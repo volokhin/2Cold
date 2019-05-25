@@ -31,7 +31,3 @@ open class ViewBase<TViewModel: ViewModelBase> : UIView, IHaveViewModel {
 
 	}
 }
-
-extension ViewBase : ICanMakeFromXib {
-	
-}

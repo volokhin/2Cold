@@ -1,7 +1,7 @@
 import UIKit
 import SlowMVVM
 
-class FreezerCell : CollectionCellBase<FreezerCellVM> {
+class FreezerCell : CollectionCellBase<FreezerCellVM>, ICanMakeFromXib {
 
 	@IBOutlet private weak var roomLabel: UILabel!
 	@IBOutlet private weak var nameLabel: UILabel!

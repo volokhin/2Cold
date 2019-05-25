@@ -8,6 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		0F61597E2298F8A300865ECB /* CommandsTests.UISegmentedControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F61597D2298F8A300865ECB /* CommandsTests.UISegmentedControl.swift */; };
+		0F6159AF22991E0F00865ECB /* BindableTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F6159AE22991E0F00865ECB /* BindableTableView.swift */; };
+		0F615F402299222D00865ECB /* ICellTemplateSelector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F615F3F2299222D00865ECB /* ICellTemplateSelector.swift */; };
+		0F615F44229923B600865ECB /* CellClassTemplate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F615F43229923B600865ECB /* CellClassTemplate.swift */; };
+		0F615F462299247000865ECB /* CellNibTemplate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F615F452299247000865ECB /* CellNibTemplate.swift */; };
+		0F615F482299251C00865ECB /* DefaultCellTemplateSelector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F615F472299251C00865ECB /* DefaultCellTemplateSelector.swift */; };
+		0F615F4A2299318300865ECB /* BindableCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F615F492299318300865ECB /* BindableCollection.swift */; };
+		0F615F4C22993BDE00865ECB /* ICellTemplate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F615F4B22993BDE00865ECB /* ICellTemplate.swift */; };
+		0F615F4E2299651300865ECB /* AnyCellTemplate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F615F4D2299651300865ECB /* AnyCellTemplate.swift */; };
+		0F615F502299708200865ECB /* IDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F615F4F2299708200865ECB /* IDataSource.swift */; };
 		0F68263422842855008097F2 /* UISegmentedControl.Commands.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F68263322842855008097F2 /* UISegmentedControl.Commands.swift */; };
 		0F68263622842A1E008097F2 /* ActionToCommandAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F68263522842A1E008097F2 /* ActionToCommandAdapter.swift */; };
 		0FC70144227DFB5800893B4F /* INotificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FC70143227DFB5800893B4F /* INotificationService.swift */; };
@@ -47,6 +56,15 @@
 
 /* Begin PBXFileReference section */
 		0F61597D2298F8A300865ECB /* CommandsTests.UISegmentedControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommandsTests.UISegmentedControl.swift; sourceTree = "<group>"; };
+		0F6159AE22991E0F00865ECB /* BindableTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BindableTableView.swift; sourceTree = "<group>"; };
+		0F615F3F2299222D00865ECB /* ICellTemplateSelector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ICellTemplateSelector.swift; sourceTree = "<group>"; };
+		0F615F43229923B600865ECB /* CellClassTemplate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellClassTemplate.swift; sourceTree = "<group>"; };
+		0F615F452299247000865ECB /* CellNibTemplate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellNibTemplate.swift; sourceTree = "<group>"; };
+		0F615F472299251C00865ECB /* DefaultCellTemplateSelector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultCellTemplateSelector.swift; sourceTree = "<group>"; };
+		0F615F492299318300865ECB /* BindableCollection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BindableCollection.swift; sourceTree = "<group>"; };
+		0F615F4B22993BDE00865ECB /* ICellTemplate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ICellTemplate.swift; sourceTree = "<group>"; };
+		0F615F4D2299651300865ECB /* AnyCellTemplate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnyCellTemplate.swift; sourceTree = "<group>"; };
+		0F615F4F2299708200865ECB /* IDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IDataSource.swift; sourceTree = "<group>"; };
 		0F68263322842855008097F2 /* UISegmentedControl.Commands.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UISegmentedControl.Commands.swift; sourceTree = "<group>"; };
 		0F68263522842A1E008097F2 /* ActionToCommandAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionToCommandAdapter.swift; sourceTree = "<group>"; };
 		0FC70143227DFB5800893B4F /* INotificationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = INotificationService.swift; sourceTree = "<group>"; };
@@ -98,6 +116,38 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0F6159AD22991DF800865ECB /* Controls */ = {
+			isa = PBXGroup;
+			children = (
+				0F9AB0F222998E0A000B10B6 /* CollectionView */,
+				0F615F3E2299220A00865ECB /* TableView */,
+			);
+			path = Controls;
+			sourceTree = "<group>";
+		};
+		0F615F3E2299220A00865ECB /* TableView */ = {
+			isa = PBXGroup;
+			children = (
+				0F6159AE22991E0F00865ECB /* BindableTableView.swift */,
+				0F615F3F2299222D00865ECB /* ICellTemplateSelector.swift */,
+				0F615F43229923B600865ECB /* CellClassTemplate.swift */,
+				0F615F452299247000865ECB /* CellNibTemplate.swift */,
+				0F615F472299251C00865ECB /* DefaultCellTemplateSelector.swift */,
+				0F615F492299318300865ECB /* BindableCollection.swift */,
+				0F615F4B22993BDE00865ECB /* ICellTemplate.swift */,
+				0F615F4D2299651300865ECB /* AnyCellTemplate.swift */,
+				0F615F4F2299708200865ECB /* IDataSource.swift */,
+			);
+			path = TableView;
+			sourceTree = "<group>";
+		};
+		0F9AB0F222998E0A000B10B6 /* CollectionView */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = CollectionView;
+			sourceTree = "<group>";
+		};
 		0FC70142227DFAB500893B4F /* Notifications */ = {
 			isa = PBXGroup;
 			children = (
@@ -142,6 +192,7 @@
 		0FC7FBF9227DC83B00893B4F /* SlowMVVM */ = {
 			isa = PBXGroup;
 			children = (
+				0F6159AD22991DF800865ECB /* Controls */,
 				0FC70618227F092000893B4F /* Commands */,
 				0FC7FC23227DC89700893B4F /* Services */,
 				0FC7FC1D227DC89700893B4F /* CellViewModelBase.swift */,
@@ -306,16 +357,25 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0F6159AF22991E0F00865ECB /* BindableTableView.swift in Sources */,
+				0F615F482299251C00865ECB /* DefaultCellTemplateSelector.swift in Sources */,
 				0FC7FC34227DC89700893B4F /* ICanMakeFromXib.swift in Sources */,
 				0FC7FC35227DC89700893B4F /* ViewControllerViewModelBase.swift in Sources */,
+				0F615F502299708200865ECB /* IDataSource.swift in Sources */,
 				0FC7FC2F227DC89700893B4F /* ViewBase.swift in Sources */,
 				0FC7FC3D227DC89700893B4F /* ViewModelBase.swift in Sources */,
 				0FC70146227DFB6800893B4F /* NotificationService.swift in Sources */,
 				0FC7014C227DFF8F00893B4F /* SubscriberEntry.swift in Sources */,
+				0F615F4A2299318300865ECB /* BindableCollection.swift in Sources */,
+				0F615F462299247000865ECB /* CellNibTemplate.swift in Sources */,
+				0F615F4E2299651300865ECB /* AnyCellTemplate.swift in Sources */,
 				0FC7FC30227DC89700893B4F /* CellViewModelBase.swift in Sources */,
+				0F615F44229923B600865ECB /* CellClassTemplate.swift in Sources */,
+				0F615F402299222D00865ECB /* ICellTemplateSelector.swift in Sources */,
 				0FC70623227F45ED00893B4F /* Command.swift in Sources */,
 				0F68263422842855008097F2 /* UISegmentedControl.Commands.swift in Sources */,
 				0FC7061A227F093B00893B4F /* UIButton.Commands.swift in Sources */,
+				0F615F4C22993BDE00865ECB /* ICellTemplate.swift in Sources */,
 				0FC70144227DFB5800893B4F /* INotificationService.swift in Sources */,
 				0FC7FC3C227DC89700893B4F /* CollectionCellBase.swift in Sources */,
 				0FC7014A227DFF3B00893B4F /* ISubscriberEntry.swift in Sources */,

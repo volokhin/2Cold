@@ -23,7 +23,3 @@ open class CollectionCellBase<TViewModel: CellViewModelBase> : UICollectionViewC
 		}
 	}
 }
-
-extension CollectionCellBase : ICanMakeFromXib {
-
-}

@@ -3,17 +3,18 @@ import SlowMVVM
 
 class FreezersListVC : ViewControllerBase<FreezersListVM> {
 
-	private lazy var tableView: UITableView = {
-		let tableView = UITableView(frame: .zero, style: .plain)
-		tableView.backgroundColor = .clear
-		tableView.contentInset = UIEdgeInsets(top: self.headerHeight, left: 0, bottom: self.headerHeight, right: 0)
-		tableView.contentOffset = CGPoint(x: 0, y: -self.headerHeight)
-		tableView.alwaysBounceVertical = true
-		tableView.bounces = true
-		tableView.separatorStyle = .none
-		tableView.register(FreezerListItemCell.nib(), forCellReuseIdentifier: "FreezerListItemCell")
-		tableView.dataSource = self
-		tableView.delegate = self
+	private lazy var tableView: BindableTableView = {
+		let tableView = BindableTableView()
+		tableView.table.backgroundColor = .clear
+		tableView.table.contentInset = UIEdgeInsets(top: self.headerHeight, left: 0, bottom: self.headerHeight, right: 0)
+		tableView.table.contentOffset = CGPoint(x: 0, y: -self.headerHeight)
+		tableView.table.alwaysBounceVertical = true
+		tableView.table.bounces = true
+		tableView.table.separatorStyle = .none
+		tableView.scrollViewDidScroll.subscribe(self) {
+			this, scrollView in
+			this.scrollViewDidScroll(scrollView)
+		}
 		return tableView
 	}()
 
@@ -133,18 +134,19 @@ class FreezersListVC : ViewControllerBase<FreezersListVM> {
 		self.carouselButton.command = vm.openCarouselCommand
 		self.segmentedControl.command = vm.changeFloorCommand
 		self.segmentedControl.selectedSegmentIndex = vm.selectedFloorIndex
+		self.tableView.dataSource = vm.items
 
-		vm.onReload = {
-			[weak self] in
-			guard let self = self else { return }
-			self.tableView.reloadData()
-		}
+		//vm.onReload = {
+//			[weak self] in
+//			guard let self = self else { return }
+//			//self.tableView.reloadData()
+//		}
 
 		vm.onSelectedFreezerChanged = {
 			[weak self] index in
 			guard let self = self else { return }
 			guard !self.isActive else { return }
-			self.tableView.scrollToRow(at: IndexPath(row: index, section: 0), at: .top, animated: false)
+			//self.tableView.scrollToRow(at: IndexPath(row: index, section: 0), at: .top, animated: false)
 		}
 	}
 
@@ -170,36 +172,7 @@ class FreezersListVC : ViewControllerBase<FreezersListVM> {
 		}
 	}
 
-}
-
-extension FreezersListVC : UITableViewDataSource {
-
-	func numberOfSections(in tableView: UITableView) -> Int {
-		return 1
-	}
-
-	func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-		return self.viewModel?.items.count ?? 0
-	}
-
-	func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-		let cell = tableView.dequeueReusableCell(withIdentifier: "FreezerListItemCell", for: indexPath)
-		if var cell = cell as? IHaveViewModel {
-			let item = self.viewModel?.items[indexPath.row]
-			cell.viewModelObject = item
-		}
-		return cell
-	}
-}
-
-extension FreezersListVC : UITableViewDelegate {
-
-	func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-		let item = self.viewModel?.items[indexPath.row]
-		item?.didSelect()
-	}
-
-	func scrollViewDidScroll(_ scrollView: UIScrollView) {
+	private func scrollViewDidScroll(_ scrollView: UIScrollView) {
 		let offset = scrollView.contentOffset.y + self.headerHeight + self.view.safeAreaInsets.top
 		let translation = max(offset, 0)
 		self.segmentedControl.transform = CGAffineTransform(translationX: 0, y: -translation)
@@ -207,5 +180,4 @@ extension FreezersListVC : UITableViewDelegate {
 		let opacity = min(max((threshold - offset) / threshold, 0), 1)
 		self.topGradientView.layer.shadowOpacity = Float(opacity)
 	}
-
 }
