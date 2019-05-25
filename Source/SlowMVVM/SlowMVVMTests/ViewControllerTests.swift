@@ -15,7 +15,7 @@ internal class ViewControllerTests: XCTestCase {
 		vc = nil
 		vm = nil
 
-		XCTAssert(weakVc.value == nil)
-		XCTAssert(weakVm.value == nil)
+		XCTAssert(weakVc.isAlive == false)
+		XCTAssert(weakVm.isAlive == false)
 	}
 }

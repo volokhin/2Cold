@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0F61597E2298F8A300865ECB /* CommandsTests.UISegmentedControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F61597D2298F8A300865ECB /* CommandsTests.UISegmentedControl.swift */; };
 		0F68263422842855008097F2 /* UISegmentedControl.Commands.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F68263322842855008097F2 /* UISegmentedControl.Commands.swift */; };
 		0F68263622842A1E008097F2 /* ActionToCommandAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F68263522842A1E008097F2 /* ActionToCommandAdapter.swift */; };
 		0FC70144227DFB5800893B4F /* INotificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FC70143227DFB5800893B4F /* INotificationService.swift */; };
@@ -18,7 +19,7 @@
 		0FC70623227F45ED00893B4F /* Command.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FC70622227F45ED00893B4F /* Command.swift */; };
 		0FC7FC01227DC83B00893B4F /* SlowMVVM.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0FC7FBF7227DC83B00893B4F /* SlowMVVM.framework */; };
 		0FC7FC08227DC83B00893B4F /* SlowMVVM.h in Headers */ = {isa = PBXBuildFile; fileRef = 0FC7FBFA227DC83B00893B4F /* SlowMVVM.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		0FC7FC16227DC85800893B4F /* CommandsServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FC7FC11227DC85800893B4F /* CommandsServiceTests.swift */; };
+		0FC7FC16227DC85800893B4F /* CommandsTests.UIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FC7FC11227DC85800893B4F /* CommandsTests.UIButton.swift */; };
 		0FC7FC17227DC85800893B4F /* ViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FC7FC12227DC85800893B4F /* ViewControllerTests.swift */; };
 		0FC7FC19227DC85800893B4F /* TestData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FC7FC15227DC85800893B4F /* TestData.swift */; };
 		0FC7FC2D227DC89700893B4F /* IHaveViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FC7FC1A227DC89700893B4F /* IHaveViewModel.swift */; };
@@ -45,6 +46,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0F61597D2298F8A300865ECB /* CommandsTests.UISegmentedControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommandsTests.UISegmentedControl.swift; sourceTree = "<group>"; };
 		0F68263322842855008097F2 /* UISegmentedControl.Commands.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UISegmentedControl.Commands.swift; sourceTree = "<group>"; };
 		0F68263522842A1E008097F2 /* ActionToCommandAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionToCommandAdapter.swift; sourceTree = "<group>"; };
 		0FC70143227DFB5800893B4F /* INotificationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = INotificationService.swift; sourceTree = "<group>"; };
@@ -59,7 +61,7 @@
 		0FC7FBFB227DC83B00893B4F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0FC7FC00227DC83B00893B4F /* SlowMVVMTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SlowMVVMTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0FC7FC07227DC83B00893B4F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		0FC7FC11227DC85800893B4F /* CommandsServiceTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommandsServiceTests.swift; sourceTree = "<group>"; };
+		0FC7FC11227DC85800893B4F /* CommandsTests.UIButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommandsTests.UIButton.swift; sourceTree = "<group>"; };
 		0FC7FC12227DC85800893B4F /* ViewControllerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerTests.swift; sourceTree = "<group>"; };
 		0FC7FC15227DC85800893B4F /* TestData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestData.swift; sourceTree = "<group>"; };
 		0FC7FC1A227DC89700893B4F /* IHaveViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IHaveViewModel.swift; sourceTree = "<group>"; };
@@ -161,7 +163,8 @@
 			isa = PBXGroup;
 			children = (
 				0FC7FC14227DC85800893B4F /* TestData */,
-				0FC7FC11227DC85800893B4F /* CommandsServiceTests.swift */,
+				0FC7FC11227DC85800893B4F /* CommandsTests.UIButton.swift */,
+				0F61597D2298F8A300865ECB /* CommandsTests.UISegmentedControl.swift */,
 				0FC7FC12227DC85800893B4F /* ViewControllerTests.swift */,
 				0FC7FC07227DC83B00893B4F /* Info.plist */,
 				0FC7014D227E046D00893B4F /* NotificationServiceTests.swift */,
@@ -328,9 +331,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				0FC7014E227E046D00893B4F /* NotificationServiceTests.swift in Sources */,
+				0F61597E2298F8A300865ECB /* CommandsTests.UISegmentedControl.swift in Sources */,
 				0FC7FC17227DC85800893B4F /* ViewControllerTests.swift in Sources */,
 				0FC7FC19227DC85800893B4F /* TestData.swift in Sources */,
-				0FC7FC16227DC85800893B4F /* CommandsServiceTests.swift in Sources */,
+				0FC7FC16227DC85800893B4F /* CommandsTests.UIButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

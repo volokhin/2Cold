@@ -12,6 +12,7 @@ public extension UISegmentedControl {
 		set {
 			if let oldAdapter: Adapter = self.associatedObject(for: &adapterKey) {
 				self.removeTarget(oldAdapter, action: #selector(oldAdapter.invoke), for: .valueChanged)
+				self.removeAssociatedObject(for: &adapterKey)
 			}
 			if let command = newValue {
 				let adapter = Adapter(command: command) { $0.selectedSegmentIndex }

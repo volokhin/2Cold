@@ -14,9 +14,9 @@ class AssociatedObjectsTests: XCTestCase {
 
 	func test_store_string() {
 		var key: Int = 0
-		self.targetObject.setAssociatedObject("string", for: &key, policy: .strong)
+		self.targetObject.setAssociatedObject("test", for: &key, policy: .strong)
 		let result: String? = self.targetObject.associatedObject(for: &key)
-		XCTAssert(result == "string")
+		XCTAssert(result == "test")
 	}
 
 	func test_store_int() {
@@ -66,6 +66,14 @@ class AssociatedObjectsTests: XCTestCase {
 		let result: TestValue? = self.targetObject.associatedObject(for: &key)
 		XCTAssert(result != nil)
 		XCTAssert(weak.isAlive == true)
+	}
+
+	func test_remove_object() {
+		var key: Int = 0
+		self.targetObject.setAssociatedObject("test", for: &key, policy: .strong)
+		self.targetObject.removeAssociatedObject(for: &key)
+		let result: String? = self.targetObject.associatedObject(for: &key)
+		XCTAssert(result == nil)
 	}
 
 //	func test_do_not_retain_weak_object() {

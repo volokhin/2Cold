@@ -27,7 +27,7 @@
 		0FC7FB94227D587A00893B4F /* ContainerTests.Loging.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FC7FB89227D587A00893B4F /* ContainerTests.Loging.swift */; };
 		0FC7FB96227D587A00893B4F /* ContainerTests.ContainsAndUnregister.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FC7FB8B227D587A00893B4F /* ContainerTests.ContainsAndUnregister.swift */; };
 		0FC7FB97227D587A00893B4F /* ContainerTests.Events.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FC7FB8C227D587A00893B4F /* ContainerTests.Events.swift */; };
-		0FC7FB98227D587A00893B4F /* ContainerTests_Retaining.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FC7FB8D227D587A00893B4F /* ContainerTests_Retaining.swift */; };
+		0FC7FB98227D587A00893B4F /* ContainerTests.Retaining.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FC7FB8D227D587A00893B4F /* ContainerTests.Retaining.swift */; };
 		0FC7FB99227D587A00893B4F /* ContainerTests.ResolveByName.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FC7FB8E227D587A00893B4F /* ContainerTests.ResolveByName.swift */; };
 		0FC7FB9A227D587A00893B4F /* ContainerTests.Shortcuts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FC7FB8F227D587A00893B4F /* ContainerTests.Shortcuts.swift */; };
 		0FC7FB9D227D587A00893B4F /* ContainerTests.RegisterAs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FC7FB92227D587A00893B4F /* ContainerTests.RegisterAs.swift */; };
@@ -71,7 +71,7 @@
 		0FC7FB89227D587A00893B4F /* ContainerTests.Loging.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContainerTests.Loging.swift; sourceTree = "<group>"; };
 		0FC7FB8B227D587A00893B4F /* ContainerTests.ContainsAndUnregister.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContainerTests.ContainsAndUnregister.swift; sourceTree = "<group>"; };
 		0FC7FB8C227D587A00893B4F /* ContainerTests.Events.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContainerTests.Events.swift; sourceTree = "<group>"; };
-		0FC7FB8D227D587A00893B4F /* ContainerTests_Retaining.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContainerTests_Retaining.swift; sourceTree = "<group>"; };
+		0FC7FB8D227D587A00893B4F /* ContainerTests.Retaining.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContainerTests.Retaining.swift; sourceTree = "<group>"; };
 		0FC7FB8E227D587A00893B4F /* ContainerTests.ResolveByName.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContainerTests.ResolveByName.swift; sourceTree = "<group>"; };
 		0FC7FB8F227D587A00893B4F /* ContainerTests.Shortcuts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContainerTests.Shortcuts.swift; sourceTree = "<group>"; };
 		0FC7FB92227D587A00893B4F /* ContainerTests.RegisterAs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContainerTests.RegisterAs.swift; sourceTree = "<group>"; };
@@ -145,7 +145,7 @@
 			isa = PBXGroup;
 			children = (
 				0FC7FB9E227D590300893B4F /* Mocks */,
-				0FC7FB8D227D587A00893B4F /* ContainerTests_Retaining.swift */,
+				0FC7FB8D227D587A00893B4F /* ContainerTests.Retaining.swift */,
 				0FC7FB8B227D587A00893B4F /* ContainerTests.ContainsAndUnregister.swift */,
 				0FC7FB8C227D587A00893B4F /* ContainerTests.Events.swift */,
 				0FC7FB89227D587A00893B4F /* ContainerTests.Loging.swift */,
@@ -321,7 +321,7 @@
 				0FC7FB9D227D587A00893B4F /* ContainerTests.RegisterAs.swift in Sources */,
 				0FC7FBA4227D590300893B4F /* TestData.swift in Sources */,
 				0FC7FBA6227D590300893B4F /* LogMock.swift in Sources */,
-				0FC7FB98227D587A00893B4F /* ContainerTests_Retaining.swift in Sources */,
+				0FC7FB98227D587A00893B4F /* ContainerTests.Retaining.swift in Sources */,
 				0FC7FB93227D587A00893B4F /* ContainerTests.SimpleResolve.swift in Sources */,
 				0FC7FB94227D587A00893B4F /* ContainerTests.Loging.swift in Sources */,
 				0FC7FB9A227D587A00893B4F /* ContainerTests.Shortcuts.swift in Sources */,

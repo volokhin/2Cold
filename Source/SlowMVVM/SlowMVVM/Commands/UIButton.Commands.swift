@@ -12,6 +12,7 @@ public extension UIButton {
 		set {
 			if let oldAdapter: Adapter = self.associatedObject(for: &adapterKey) {
 				self.removeTarget(oldAdapter, action: #selector(oldAdapter.invoke), for: .touchUpInside)
+				self.removeAssociatedObject(for: &adapterKey)
 			}
 			if let command = newValue {
 				let adapter = Adapter(command: command)

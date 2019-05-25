@@ -74,4 +74,15 @@ class EventTests: XCTestCase {
 		XCTAssert(invocationsCount == 0)
 	}
 
+	func test_unsubscribe() {
+		var invocationsCount: Int = 0
+		self.eventHolder.event.subscribe(self) {
+			_ in
+			invocationsCount = invocationsCount + 1
+		}
+		self.eventHolder.event.unsubscribe(self)
+		self.eventHolder.event.raise()
+		XCTAssert(invocationsCount == 0)
+	}
+
 }

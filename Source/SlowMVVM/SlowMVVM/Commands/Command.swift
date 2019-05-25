@@ -18,7 +18,7 @@ open class Command<Parameter> {
 		self.onExecute.subscribe(subscriber, handler: handler)
 	}
 
-	public func execute(parameter: Parameter) {
+	func execute(parameter: Parameter) {
 		self.onExecute.raise(parameter)
 	}
 }
