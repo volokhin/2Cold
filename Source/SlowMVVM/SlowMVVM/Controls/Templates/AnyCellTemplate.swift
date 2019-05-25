@@ -26,6 +26,10 @@ public struct AnyCellTemplate : ICellTemplate {
 	public func register(in tableView: UITableView) {
 		self.template.register(in: tableView)
 	}
+
+	public func register(in collectionView: UICollectionView) {
+		self.template.register(in: collectionView)
+	}
 }
 
 extension AnyCellTemplate : Hashable {

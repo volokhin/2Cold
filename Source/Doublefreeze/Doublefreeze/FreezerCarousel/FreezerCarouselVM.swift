@@ -6,9 +6,9 @@ class FreezerCarouselVM : ViewControllerViewModelBase {
 	private var settings: IUserSettings
 	private let notificationService: INotificationService
 	private let freezersService: IFreezersService
-	private var itemsMap: [FreezerIdentifier: FreezerCellVM] = [:]
+	private var itemsMap: [FreezerIdentifier: FreezerVM] = [:]
 
-	var items: [FreezerCellVM] = []
+	var items: BindableCollection<FreezerVM> = []
 	var onReload: (() -> Void)?
 
 	lazy var openListCommand: Command<Void> = {
@@ -17,7 +17,7 @@ class FreezerCarouselVM : ViewControllerViewModelBase {
 		}
 	}()
 
-	var selectedItem: FreezerCellVM? {
+	var selectedItem: FreezerVM? {
 		didSet {
 			if oldValue?.uniqueId != self.selectedItem?.uniqueId {
 				self.changeSelectedItem()
@@ -90,10 +90,11 @@ class FreezerCarouselVM : ViewControllerViewModelBase {
 
 	private func createItems() {
 		let freezers = self.freezersService.freezers()
-		self.items = freezers
+		let items = freezers
 			.filter { $0.floor == self.selectedFloor }
 			.sorted { $0.place == $1.place ? $0.name < $1.name : $0.place < $1.place }
-			.map { FreezerCellVM(model: $0, notificationService: self.notificationService, freezersService: self.freezersService) }
+			.map { FreezerVM(model: $0, notificationService: self.notificationService, freezersService: self.freezersService) }
+		self.items.reload(with: items)
 		self.itemsMap = Dictionary(uniqueKeysWithValues: self.items.map { ($0.uniqueId, $0) })
 	}
 

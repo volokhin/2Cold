@@ -30,10 +30,4 @@ extension UIColor {
 		return UIColor(named: "BrownishGrey")!
 	}
 
-
-
-
-
-
-
 }

@@ -1,7 +1,7 @@
 import UIKit
 import SlowMVVM
 
-class ToggleView : ViewBase<FreezerCellVM> {
+class ToggleView : ViewBase<FreezerVM> {
 
 	private var isFirstTimeStateSet: Bool = true
 

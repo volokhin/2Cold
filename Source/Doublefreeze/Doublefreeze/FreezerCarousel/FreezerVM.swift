@@ -1,7 +1,7 @@
 import Foundation
 import SlowMVVM
 
-class FreezerCellVM : CellViewModelBase {
+class FreezerVM : CellViewModelBase {
 
 	private let notificationService: INotificationService
 	private let freezersService: IFreezersService

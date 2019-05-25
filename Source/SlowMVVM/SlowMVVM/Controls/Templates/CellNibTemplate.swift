@@ -13,6 +13,10 @@ public struct CellNibTemplate : ICellTemplate {
 	public func register(in tableView: UITableView) {
 		tableView.register(self.nib, forCellReuseIdentifier: self.reuseIdentifier)
 	}
+
+	public func register(in collectionView: UICollectionView) {
+		collectionView.register(self.nib, forCellWithReuseIdentifier: self.reuseIdentifier)
+	}
 }
 
 extension CellNibTemplate : Hashable {

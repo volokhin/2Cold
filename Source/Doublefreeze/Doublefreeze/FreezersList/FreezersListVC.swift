@@ -136,17 +136,11 @@ class FreezersListVC : ViewControllerBase<FreezersListVM> {
 		self.segmentedControl.selectedSegmentIndex = vm.selectedFloorIndex
 		self.tableView.dataSource = vm.items
 
-		//vm.onReload = {
-//			[weak self] in
-//			guard let self = self else { return }
-//			//self.tableView.reloadData()
-//		}
-
 		vm.onSelectedFreezerChanged = {
 			[weak self] index in
 			guard let self = self else { return }
 			guard !self.isActive else { return }
-			//self.tableView.scrollToRow(at: IndexPath(row: index, section: 0), at: .top, animated: false)
+			self.tableView.table.scrollToRow(at: IndexPath(row: index, section: 0), at: .top, animated: false)
 		}
 	}
 

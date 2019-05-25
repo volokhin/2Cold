@@ -1,13 +1,13 @@
 import UIKit
 
-public protocol ICanMakeFromXib {
+public protocol IFromXib {
 
 	static func makeFromXib() -> Self
 	static func nib() -> UINib
 
 }
 
-public extension ICanMakeFromXib where Self: UIView {
+public extension IFromXib where Self: UIView {
 
 	static func nib() -> UINib {
 		let bundle = Bundle.main

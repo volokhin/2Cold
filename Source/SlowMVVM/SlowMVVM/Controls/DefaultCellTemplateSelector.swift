@@ -11,7 +11,7 @@ public final class DefaultCellTemplateSelector : ICellTemplateSelector {
 		if result == nil, let cellTypeString = self.convertToCellTypeString(vmTypeString) {
 			let cellType: AnyClass? = NSClassFromString(cellTypeString)
 			if let cellType = cellType {
-				if let nibCell = cellType as? ICanMakeFromXib.Type {
+				if let nibCell = cellType as? IFromXib.Type {
 					let template = CellNibTemplate(nib: nibCell.nib(), reuseIdentifier: cellTypeString)
 					result = AnyCellTemplate(template)
 					self.cache[vmTypeString] = result

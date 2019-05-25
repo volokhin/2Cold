@@ -15,7 +15,7 @@
 		0F139F182278A8F300B763F7 /* FreezerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F139F132278A8F300B763F7 /* FreezerCell.swift */; };
 		0F139F192278A8F300B763F7 /* FreezerCarouselVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F139F142278A8F300B763F7 /* FreezerCarouselVM.swift */; };
 		0F139F1A2278A8F300B763F7 /* FreezerCarouselVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F139F152278A8F300B763F7 /* FreezerCarouselVC.swift */; };
-		0F139F1B2278A8F300B763F7 /* FreezerCellVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F139F162278A8F300B763F7 /* FreezerCellVM.swift */; };
+		0F139F1B2278A8F300B763F7 /* FreezerVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F139F162278A8F300B763F7 /* FreezerVM.swift */; };
 		0F139F1F2278A8F900B763F7 /* FreezersListVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F139F1D2278A8F900B763F7 /* FreezersListVM.swift */; };
 		0F139F202278A8F900B763F7 /* FreezersListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F139F1E2278A8F900B763F7 /* FreezersListVC.swift */; };
 		0F139F242278A90000B763F7 /* HomeVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F139F222278A90000B763F7 /* HomeVM.swift */; };
@@ -86,7 +86,7 @@
 		0F139F132278A8F300B763F7 /* FreezerCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FreezerCell.swift; sourceTree = "<group>"; };
 		0F139F142278A8F300B763F7 /* FreezerCarouselVM.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FreezerCarouselVM.swift; sourceTree = "<group>"; };
 		0F139F152278A8F300B763F7 /* FreezerCarouselVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FreezerCarouselVC.swift; sourceTree = "<group>"; };
-		0F139F162278A8F300B763F7 /* FreezerCellVM.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FreezerCellVM.swift; sourceTree = "<group>"; };
+		0F139F162278A8F300B763F7 /* FreezerVM.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FreezerVM.swift; sourceTree = "<group>"; };
 		0F139F1D2278A8F900B763F7 /* FreezersListVM.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FreezersListVM.swift; sourceTree = "<group>"; };
 		0F139F1E2278A8F900B763F7 /* FreezersListVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FreezersListVC.swift; sourceTree = "<group>"; };
 		0F139F222278A90000B763F7 /* HomeVM.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeVM.swift; sourceTree = "<group>"; };
@@ -193,7 +193,7 @@
 				0F139F132278A8F300B763F7 /* FreezerCell.swift */,
 				0F139F142278A8F300B763F7 /* FreezerCarouselVM.swift */,
 				0F139F152278A8F300B763F7 /* FreezerCarouselVC.swift */,
-				0F139F162278A8F300B763F7 /* FreezerCellVM.swift */,
+				0F139F162278A8F300B763F7 /* FreezerVM.swift */,
 				0F7B63AE228DB1D800F2F6BA /* ToggleView.swift */,
 			);
 			path = FreezerCarousel;
@@ -372,7 +372,7 @@
 				0F139EFD2278A86900B763F7 /* AppDelegate.swift in Sources */,
 				0F139F1F2278A8F900B763F7 /* FreezersListVM.swift in Sources */,
 				0F7B63AF228DB1D800F2F6BA /* ToggleView.swift in Sources */,
-				0F139F1B2278A8F300B763F7 /* FreezerCellVM.swift in Sources */,
+				0F139F1B2278A8F300B763F7 /* FreezerVM.swift in Sources */,
 				0FC7011A227DCE2D00893B4F /* FreezersService.swift in Sources */,
 				0F7B63AB228DAF9700F2F6BA /* EnabledChangedNotification.swift in Sources */,
 				0F139F182278A8F300B763F7 /* FreezerCell.swift in Sources */,

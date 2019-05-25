@@ -20,6 +20,7 @@ public class BindableTableView : UIView {
 
 	public init() {
 		super.init(frame: .zero)
+		self.backgroundColor = .clear
 		self.table.dataSource = self
 		self.table.delegate = self
 		self.table.register(UITableViewCell.self, forCellReuseIdentifier: "default")

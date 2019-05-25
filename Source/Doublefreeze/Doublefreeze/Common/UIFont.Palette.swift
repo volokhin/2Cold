@@ -10,9 +10,4 @@ extension UIFont {
 		return UIFont(name: "SuisseIntl-Regular", size: 13.0)!
 	}
 
-
-
 }
-
-
-

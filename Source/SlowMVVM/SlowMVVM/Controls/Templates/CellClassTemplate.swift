@@ -14,6 +14,10 @@ public struct CellClassTemplate : ICellTemplate {
 		tableView.register(self.cellClass, forCellReuseIdentifier: self.reuseIdentifier)
 	}
 
+	public func register(in collectionView: UICollectionView) {
+		collectionView.register(self.cellClass, forCellWithReuseIdentifier: self.reuseIdentifier)
+	}
+
 }
 
 extension CellClassTemplate : Hashable {

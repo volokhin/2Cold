@@ -19,6 +19,7 @@
 		0F615F502299708200865ECB /* IDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F615F4F2299708200865ECB /* IDataSource.swift */; };
 		0F68263422842855008097F2 /* UISegmentedControl.Commands.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F68263322842855008097F2 /* UISegmentedControl.Commands.swift */; };
 		0F68263622842A1E008097F2 /* ActionToCommandAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F68263522842A1E008097F2 /* ActionToCommandAdapter.swift */; };
+		0F9AB0F422998E6B000B10B6 /* BindableCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F9AB0F322998E6B000B10B6 /* BindableCollectionView.swift */; };
 		0FC70144227DFB5800893B4F /* INotificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FC70143227DFB5800893B4F /* INotificationService.swift */; };
 		0FC70146227DFB6800893B4F /* NotificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FC70145227DFB6800893B4F /* NotificationService.swift */; };
 		0FC7014A227DFF3B00893B4F /* ISubscriberEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FC70149227DFF3B00893B4F /* ISubscriberEntry.swift */; };
@@ -36,7 +37,7 @@
 		0FC7FC2F227DC89700893B4F /* ViewBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FC7FC1C227DC89700893B4F /* ViewBase.swift */; };
 		0FC7FC30227DC89700893B4F /* CellViewModelBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FC7FC1D227DC89700893B4F /* CellViewModelBase.swift */; };
 		0FC7FC33227DC89700893B4F /* TableCellBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FC7FC20227DC89700893B4F /* TableCellBase.swift */; };
-		0FC7FC34227DC89700893B4F /* ICanMakeFromXib.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FC7FC21227DC89700893B4F /* ICanMakeFromXib.swift */; };
+		0FC7FC34227DC89700893B4F /* IFromXib.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FC7FC21227DC89700893B4F /* IFromXib.swift */; };
 		0FC7FC35227DC89700893B4F /* ViewControllerViewModelBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FC7FC22227DC89700893B4F /* ViewControllerViewModelBase.swift */; };
 		0FC7FC3C227DC89700893B4F /* CollectionCellBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FC7FC2B227DC89700893B4F /* CollectionCellBase.swift */; };
 		0FC7FC3D227DC89700893B4F /* ViewModelBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FC7FC2C227DC89700893B4F /* ViewModelBase.swift */; };
@@ -67,6 +68,7 @@
 		0F615F4F2299708200865ECB /* IDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IDataSource.swift; sourceTree = "<group>"; };
 		0F68263322842855008097F2 /* UISegmentedControl.Commands.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UISegmentedControl.Commands.swift; sourceTree = "<group>"; };
 		0F68263522842A1E008097F2 /* ActionToCommandAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionToCommandAdapter.swift; sourceTree = "<group>"; };
+		0F9AB0F322998E6B000B10B6 /* BindableCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BindableCollectionView.swift; sourceTree = "<group>"; };
 		0FC70143227DFB5800893B4F /* INotificationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = INotificationService.swift; sourceTree = "<group>"; };
 		0FC70145227DFB6800893B4F /* NotificationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationService.swift; sourceTree = "<group>"; };
 		0FC70149227DFF3B00893B4F /* ISubscriberEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ISubscriberEntry.swift; sourceTree = "<group>"; };
@@ -87,7 +89,7 @@
 		0FC7FC1C227DC89700893B4F /* ViewBase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewBase.swift; sourceTree = "<group>"; };
 		0FC7FC1D227DC89700893B4F /* CellViewModelBase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CellViewModelBase.swift; sourceTree = "<group>"; };
 		0FC7FC20227DC89700893B4F /* TableCellBase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableCellBase.swift; sourceTree = "<group>"; };
-		0FC7FC21227DC89700893B4F /* ICanMakeFromXib.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ICanMakeFromXib.swift; sourceTree = "<group>"; };
+		0FC7FC21227DC89700893B4F /* IFromXib.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IFromXib.swift; sourceTree = "<group>"; };
 		0FC7FC22227DC89700893B4F /* ViewControllerViewModelBase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerViewModelBase.swift; sourceTree = "<group>"; };
 		0FC7FC2B227DC89700893B4F /* CollectionCellBase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionCellBase.swift; sourceTree = "<group>"; };
 		0FC7FC2C227DC89700893B4F /* ViewModelBase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewModelBase.swift; sourceTree = "<group>"; };
@@ -119,8 +121,13 @@
 		0F6159AD22991DF800865ECB /* Controls */ = {
 			isa = PBXGroup;
 			children = (
-				0F9AB0F222998E0A000B10B6 /* CollectionView */,
+				0F9AB0F52299921C000B10B6 /* Templates */,
+				0F615F4F2299708200865ECB /* IDataSource.swift */,
+				0F615F3F2299222D00865ECB /* ICellTemplateSelector.swift */,
+				0F615F472299251C00865ECB /* DefaultCellTemplateSelector.swift */,
+				0F615F492299318300865ECB /* BindableCollection.swift */,
 				0F615F3E2299220A00865ECB /* TableView */,
+				0F9AB0F222998E0A000B10B6 /* CollectionView */,
 			);
 			path = Controls;
 			sourceTree = "<group>";
@@ -129,14 +136,6 @@
 			isa = PBXGroup;
 			children = (
 				0F6159AE22991E0F00865ECB /* BindableTableView.swift */,
-				0F615F3F2299222D00865ECB /* ICellTemplateSelector.swift */,
-				0F615F43229923B600865ECB /* CellClassTemplate.swift */,
-				0F615F452299247000865ECB /* CellNibTemplate.swift */,
-				0F615F472299251C00865ECB /* DefaultCellTemplateSelector.swift */,
-				0F615F492299318300865ECB /* BindableCollection.swift */,
-				0F615F4B22993BDE00865ECB /* ICellTemplate.swift */,
-				0F615F4D2299651300865ECB /* AnyCellTemplate.swift */,
-				0F615F4F2299708200865ECB /* IDataSource.swift */,
 			);
 			path = TableView;
 			sourceTree = "<group>";
@@ -144,8 +143,20 @@
 		0F9AB0F222998E0A000B10B6 /* CollectionView */ = {
 			isa = PBXGroup;
 			children = (
+				0F9AB0F322998E6B000B10B6 /* BindableCollectionView.swift */,
 			);
 			path = CollectionView;
+			sourceTree = "<group>";
+		};
+		0F9AB0F52299921C000B10B6 /* Templates */ = {
+			isa = PBXGroup;
+			children = (
+				0F615F4B22993BDE00865ECB /* ICellTemplate.swift */,
+				0F615F43229923B600865ECB /* CellClassTemplate.swift */,
+				0F615F452299247000865ECB /* CellNibTemplate.swift */,
+				0F615F4D2299651300865ECB /* AnyCellTemplate.swift */,
+			);
+			path = Templates;
 			sourceTree = "<group>";
 		};
 		0FC70142227DFAB500893B4F /* Notifications */ = {
@@ -197,7 +208,7 @@
 				0FC7FC23227DC89700893B4F /* Services */,
 				0FC7FC1D227DC89700893B4F /* CellViewModelBase.swift */,
 				0FC7FC2B227DC89700893B4F /* CollectionCellBase.swift */,
-				0FC7FC21227DC89700893B4F /* ICanMakeFromXib.swift */,
+				0FC7FC21227DC89700893B4F /* IFromXib.swift */,
 				0FC7FC1A227DC89700893B4F /* IHaveViewModel.swift */,
 				0FC7FC20227DC89700893B4F /* TableCellBase.swift */,
 				0FC7FC1C227DC89700893B4F /* ViewBase.swift */,
@@ -359,7 +370,8 @@
 			files = (
 				0F6159AF22991E0F00865ECB /* BindableTableView.swift in Sources */,
 				0F615F482299251C00865ECB /* DefaultCellTemplateSelector.swift in Sources */,
-				0FC7FC34227DC89700893B4F /* ICanMakeFromXib.swift in Sources */,
+				0FC7FC34227DC89700893B4F /* IFromXib.swift in Sources */,
+				0F9AB0F422998E6B000B10B6 /* BindableCollectionView.swift in Sources */,
 				0FC7FC35227DC89700893B4F /* ViewControllerViewModelBase.swift in Sources */,
 				0F615F502299708200865ECB /* IDataSource.swift in Sources */,
 				0FC7FC2F227DC89700893B4F /* ViewBase.swift in Sources */,

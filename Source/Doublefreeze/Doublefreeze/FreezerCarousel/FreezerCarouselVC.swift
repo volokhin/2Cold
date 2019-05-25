@@ -5,18 +5,20 @@ import SlowHelpers
 
 class FreezerCarouselVC : ViewControllerBase<FreezerCarouselVM> {
 
-	private lazy var collectionView: UICollectionView = {
+	private lazy var collectionView: BindableCollectionView = {
 		let layout = UICollectionViewFlowLayout()
 		layout.scrollDirection = .horizontal
 		layout.minimumInteritemSpacing = 0;
 		layout.minimumLineSpacing = 0;
-		let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
-		collectionView.backgroundColor = .clear
-		collectionView.isPagingEnabled = true
-		collectionView.showsHorizontalScrollIndicator = false
-		collectionView.register(FreezerCell.nib(), forCellWithReuseIdentifier: "FreezerCell")
-		collectionView.dataSource = self
-		collectionView.delegate = self
+		let collectionView = BindableCollectionView(layout: layout)
+		collectionView.collection.backgroundColor = .clear
+		collectionView.collection.isPagingEnabled = true
+		collectionView.collection.showsHorizontalScrollIndicator = false
+		collectionView.collection.delegate = self
+		collectionView.firstCellWillLoad.subscribe(self) {
+			this in
+			this.updateSelectedItem()
+		}
 		return collectionView
 	}()
 
@@ -219,13 +221,13 @@ class FreezerCarouselVC : ViewControllerBase<FreezerCarouselVM> {
 		self.progressControl.itemsCount = vm.items.count
 		self.toggleView.viewModel = vm.selectedItem
 		self.isCurrentFreezerEnabled = vm.selectedItem?.isEnabled ?? false
+		self.collectionView.dataSource = vm.items
 
 		self.updateSelectedItem()
 
 		vm.onReload = {
 			[weak self] in
 			self?.progressControl.itemsCount = vm.items.count
-			self?.collectionView.reloadData()
 		}
 	}
 
@@ -236,8 +238,8 @@ class FreezerCarouselVC : ViewControllerBase<FreezerCarouselVM> {
 			if let index = index {
 				let indexPath = IndexPath(row: index, section: 0)
 				self.progressControl.selectedItemIndex = index
-				if !self.collectionView.isDragging && !self.collectionView.isDecelerating {
-					self.collectionView.scrollToItem(at: indexPath, at: .centeredHorizontally, animated: false)
+				if !self.collectionView.collection.isDragging && !self.collectionView.collection.isDecelerating {
+					self.collectionView.collection.scrollToItem(at: indexPath, at: .centeredHorizontally, animated: false)
 				}
 			}
 		}
@@ -308,30 +310,6 @@ class FreezerCarouselVC : ViewControllerBase<FreezerCarouselVM> {
 
 }
 
-extension FreezerCarouselVC : UICollectionViewDataSource {
-
-	func numberOfSections(in collectionView: UICollectionView) -> Int {
-		return 1
-	}
-
-	func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-		return self.viewModel?.items.count ?? 0
-	}
-
-	func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-		if !self.isFirstCellLoaded {
-			self.isFirstCellLoaded = true
-			self.updateSelectedItem()
-		}
-		let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "FreezerCell", for: indexPath)
-		if var cell = cell as? IHaveViewModel {
-			let item = self.viewModel?.items[indexPath.row]
-			cell.viewModelObject = item
-		}
-		return cell
-	}
-}
-
 extension FreezerCarouselVC : UICollectionViewDelegateFlowLayout {
 
 	func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
@@ -340,7 +318,7 @@ extension FreezerCarouselVC : UICollectionViewDelegateFlowLayout {
 
 	func scrollViewDidScroll(_ scrollView: UIScrollView) {
 		guard let vm = self.viewModel else { return }
-		if let selectedCell = self.selectedCell(), let path = self.collectionView.indexPath(for: selectedCell) {
+		if let selectedCell = self.selectedCell(), let path = self.collectionView.collection.indexPath(for: selectedCell) {
 			self.progressControl.selectedItemIndex = path.row
 			if path.row >= 0 && path.row < vm.items.count {
 				vm.selectedItem = vm.items[path.row]
@@ -351,7 +329,7 @@ extension FreezerCarouselVC : UICollectionViewDelegateFlowLayout {
 	private func selectedCell() -> UICollectionViewCell? {
 		var maxWidth: CGFloat = 0
 		var selectedCell: UICollectionViewCell?
-		for cell in self.collectionView.visibleCells {
+		for cell in self.collectionView.collection.visibleCells {
 			var frame = cell.superview!.convert(cell.frame, to: self.view)
 			frame = frame.intersection(self.collectionView.frame)
 			if frame.width > maxWidth {

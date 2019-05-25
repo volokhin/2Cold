@@ -1,7 +1,7 @@
 import UIKit
 import SlowMVVM
 
-class FreezerListItemCell : TableCellBase<FreezerListItemVM>, ICanMakeFromXib {
+class FreezerListItemCell : TableCellBase<FreezerListItemVM>, IFromXib {
 
 	@IBOutlet private weak var selectionView: UIView!
 	@IBOutlet private weak var circleView: UIView!
