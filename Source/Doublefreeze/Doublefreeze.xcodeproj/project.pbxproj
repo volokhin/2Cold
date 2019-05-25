@@ -25,6 +25,16 @@
 		0F55BAE8227957190057319E /* SuisseIntl-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 0F55B161227950690057319E /* SuisseIntl-Bold.otf */; };
 		0F55BAEA227958450057319E /* SuisseIntl-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 0F55BAE9227958450057319E /* SuisseIntl-Regular.otf */; };
 		0F55BAEC2279C4C60057319E /* TogleIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F55BAEB2279C4C60057319E /* TogleIcon.swift */; };
+		0F61599A229909BD00865ECB /* SlowCommon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F615999229909BD00865ECB /* SlowCommon.framework */; };
+		0F61599C229909BD00865ECB /* SlowContainer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F61599B229909BD00865ECB /* SlowContainer.framework */; };
+		0F61599E229909BD00865ECB /* SlowControls.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F61599D229909BD00865ECB /* SlowControls.framework */; };
+		0F6159A2229909BD00865ECB /* SlowMVVM.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F6159A1229909BD00865ECB /* SlowMVVM.framework */; };
+		0F6159A422990A1900865ECB /* SlowCommon.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0F615999229909BD00865ECB /* SlowCommon.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		0F6159A622990A2600865ECB /* SlowContainer.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0F61599B229909BD00865ECB /* SlowContainer.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		0F6159A822990A2600865ECB /* SlowControls.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0F61599D229909BD00865ECB /* SlowControls.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		0F6159A922990A2600865ECB /* SlowHelpers.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F61599F229909BD00865ECB /* SlowHelpers.framework */; };
+		0F6159AA22990A2600865ECB /* SlowHelpers.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0F61599F229909BD00865ECB /* SlowHelpers.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		0F6159AC22990A2600865ECB /* SlowMVVM.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0F6159A1229909BD00865ECB /* SlowMVVM.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		0F68216C2283D4BC008097F2 /* SnowFlakeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F68216B2283D4BC008097F2 /* SnowFlakeView.swift */; };
 		0F68263822844099008097F2 /* FloorChangedNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F68263722844099008097F2 /* FloorChangedNotification.swift */; };
 		0F682B0722886872008097F2 /* IFreezersHttpClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F682B0422886872008097F2 /* IFreezersHttpClient.swift */; };
@@ -44,20 +54,20 @@
 		0FC7FB20227CAA4C00893B4F /* FreezerListItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0FC7FB1F227CAA4C00893B4F /* FreezerListItemCell.xib */; };
 		0FC7FC52227DCA8100893B4F /* FreezerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FC7FC51227DCA8100893B4F /* FreezerModel.swift */; };
 		0FC7FC54227DCB4200893B4F /* IFreezersService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FC7FC53227DCB4200893B4F /* IFreezersService.swift */; };
-		0FF3B8C3229845DE006D9098 /* SlowCommon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0FF3B8C2229845DE006D9098 /* SlowCommon.framework */; };
-		0FF3B8C5229845DE006D9098 /* SlowContainer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0FF3B8C4229845DE006D9098 /* SlowContainer.framework */; };
-		0FF3B8C7229845DE006D9098 /* SlowControls.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0FF3B8C6229845DE006D9098 /* SlowControls.framework */; };
-		0FF3B8C9229845DE006D9098 /* SlowHelpers.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0FF3B8C8229845DE006D9098 /* SlowHelpers.framework */; };
-		0FF3B8CB229845DE006D9098 /* SlowMVVM.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0FF3B8CA229845DE006D9098 /* SlowMVVM.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		0F139F932278AB0000B763F7 /* Embed Frameworks */ = {
+		0F6159842299097200865ECB /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				0F6159A822990A2600865ECB /* SlowControls.framework in Embed Frameworks */,
+				0F6159AA22990A2600865ECB /* SlowHelpers.framework in Embed Frameworks */,
+				0F6159A422990A1900865ECB /* SlowCommon.framework in Embed Frameworks */,
+				0F6159A622990A2600865ECB /* SlowContainer.framework in Embed Frameworks */,
+				0F6159AC22990A2600865ECB /* SlowMVVM.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -85,6 +95,11 @@
 		0F55B162227951570057319E /* UIFont.Palette.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIFont.Palette.swift; sourceTree = "<group>"; };
 		0F55BAE9227958450057319E /* SuisseIntl-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SuisseIntl-Regular.otf"; sourceTree = "<group>"; };
 		0F55BAEB2279C4C60057319E /* TogleIcon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TogleIcon.swift; sourceTree = "<group>"; };
+		0F615999229909BD00865ECB /* SlowCommon.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SlowCommon.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0F61599B229909BD00865ECB /* SlowContainer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SlowContainer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0F61599D229909BD00865ECB /* SlowControls.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SlowControls.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0F61599F229909BD00865ECB /* SlowHelpers.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SlowHelpers.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0F6159A1229909BD00865ECB /* SlowMVVM.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SlowMVVM.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0F68216B2283D4BC008097F2 /* SnowFlakeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnowFlakeView.swift; sourceTree = "<group>"; };
 		0F68263722844099008097F2 /* FloorChangedNotification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloorChangedNotification.swift; sourceTree = "<group>"; };
 		0F682B0422886872008097F2 /* IFreezersHttpClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IFreezersHttpClient.swift; sourceTree = "<group>"; };
@@ -104,11 +119,6 @@
 		0FC7FB1F227CAA4C00893B4F /* FreezerListItemCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FreezerListItemCell.xib; sourceTree = "<group>"; };
 		0FC7FC51227DCA8100893B4F /* FreezerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FreezerModel.swift; sourceTree = "<group>"; };
 		0FC7FC53227DCB4200893B4F /* IFreezersService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IFreezersService.swift; sourceTree = "<group>"; };
-		0FF3B8C2229845DE006D9098 /* SlowCommon.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SlowCommon.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		0FF3B8C4229845DE006D9098 /* SlowContainer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SlowContainer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		0FF3B8C6229845DE006D9098 /* SlowControls.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SlowControls.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		0FF3B8C8229845DE006D9098 /* SlowHelpers.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SlowHelpers.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		0FF3B8CA229845DE006D9098 /* SlowMVVM.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SlowMVVM.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,11 +126,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0FF3B8C3229845DE006D9098 /* SlowCommon.framework in Frameworks */,
-				0FF3B8C5229845DE006D9098 /* SlowContainer.framework in Frameworks */,
-				0FF3B8C7229845DE006D9098 /* SlowControls.framework in Frameworks */,
-				0FF3B8C9229845DE006D9098 /* SlowHelpers.framework in Frameworks */,
-				0FF3B8CB229845DE006D9098 /* SlowMVVM.framework in Frameworks */,
+				0F61599A229909BD00865ECB /* SlowCommon.framework in Frameworks */,
+				0F61599C229909BD00865ECB /* SlowContainer.framework in Frameworks */,
+				0F6159A922990A2600865ECB /* SlowHelpers.framework in Frameworks */,
+				0F61599E229909BD00865ECB /* SlowControls.framework in Frameworks */,
+				0F6159A2229909BD00865ECB /* SlowMVVM.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -240,11 +250,11 @@
 		0FC7FBBE227D6EA700893B4F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				0FF3B8C2229845DE006D9098 /* SlowCommon.framework */,
-				0FF3B8C4229845DE006D9098 /* SlowContainer.framework */,
-				0FF3B8C6229845DE006D9098 /* SlowControls.framework */,
-				0FF3B8C8229845DE006D9098 /* SlowHelpers.framework */,
-				0FF3B8CA229845DE006D9098 /* SlowMVVM.framework */,
+				0F615999229909BD00865ECB /* SlowCommon.framework */,
+				0F61599B229909BD00865ECB /* SlowContainer.framework */,
+				0F61599D229909BD00865ECB /* SlowControls.framework */,
+				0F61599F229909BD00865ECB /* SlowHelpers.framework */,
+				0F6159A1229909BD00865ECB /* SlowMVVM.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -275,7 +285,7 @@
 				0F139EF52278A86900B763F7 /* Sources */,
 				0F139EF62278A86900B763F7 /* Frameworks */,
 				0F139EF72278A86900B763F7 /* Resources */,
-				0F139F932278AB0000B763F7 /* Embed Frameworks */,
+				0F6159842299097200865ECB /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -507,20 +517,19 @@
 		0F139F0C2278A86A00B763F7 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 3E2BV6MQLC;
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = T8VV4TJVDE;
 				INFOPLIST_FILE = Doublefreeze/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.alexander.volokhin.2cold;
+				PRODUCT_BUNDLE_IDENTIFIER = com.doublegis.2cold;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "";
+				PROVISIONING_PROFILE_SPECIFIER = "Wildcard Distribution Profile";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -529,20 +538,19 @@
 		0F139F0D2278A86A00B763F7 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 3E2BV6MQLC;
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = T8VV4TJVDE;
 				INFOPLIST_FILE = Doublefreeze/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.alexander.volokhin.2cold;
+				PRODUCT_BUNDLE_IDENTIFIER = com.doublegis.2cold;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "";
+				PROVISIONING_PROFILE_SPECIFIER = "Wildcard Distribution Profile";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
