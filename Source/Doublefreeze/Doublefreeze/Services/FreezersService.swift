@@ -19,6 +19,7 @@ class FreezersService : IFreezersService {
 		FreezerModel(id: 12, place: "iOS", name: "Вадим", floor: 8),
 		FreezerModel(id: 13, place: "Android", name: "Руслан", floor: 8),
 		FreezerModel(id: 14, place: "Android", name: "Сергей", floor: 8),
+		FreezerModel(id: 15, place: "Reception", name: "Мария", floor: 8),
 		// 5 этаж
 		FreezerModel(id: 10, place: "Unix", name: "Юра", floor: 5),
 		FreezerModel(id: 11, place: "Кухня", name: "Евгений", floor: 5),
